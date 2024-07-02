@@ -1,0 +1,23 @@
+section.get-access
+    .get-access__content-block
+        +sectionTitle--with-subtitle('get-access__title', 'A part of VIP4K network', 'Get VIP4K Premium and save')
+        //- End section-title
+
+        //- Items
+        .get-access__advantages
+            //- - var parentIconTitleClass = 'get-access__item'
+            - var iconTitleTheme = 'tranparent-bg'
+            - var iconTitleSize = 'm'
+            - var iconTitleItems = [{spriteName: '14-series', title: 'All inclusive access<br>(all 14 series included)', parent: 'get-access__item'}, {spriteName: 'unlim-downloads', title: 'Unlimited<br class="hide-mobile"> downloads', parent: 'get-access__item'}, {spriteName: 'early-access', title: 'Early access to new<br class="hide-mobile"> series', parent: 'get-access__item'}, {spriteName: 'premium-membership', title: 'Premium<br class="hide-mobile">membership support', parent: 'get-access__item'}, {spriteName: 'special-offer', title: 'Special partner<br class="hide-mobile"> offers', parent: 'get-access__item'}]
+            each item in iconTitleItems
+                +iconTitleItem--get-access('get-access__item', item.spriteName, item.title)
+            //- End loop
+        //- ENd items
+
+        a.get-access__btn.btn.btn--size-df.btn--theme-accent(href="/") get instant access
+    //- End content block
+
+    .get-access__bg-block
+        +responsiveImage--oneSize('get-access__bg', '/assets/images/get-access-bg', 'png')
+    //- End bg
+//- End section

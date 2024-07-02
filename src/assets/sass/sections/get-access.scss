@@ -1,0 +1,126 @@
+.get-access {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.056) 0%, rgba(255, 255, 255, 0) 98.41%);
+    border: .1rem solid rgba(255, 255, 255, 0.04);
+    border-radius: 1rem;
+    overflow: hidden;
+
+    // Content side
+    &__content-block {
+        position: relative;
+        flex-basis: 70.4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 6.4rem 4.5rem 6.5rem 1.5rem;
+        z-index: z('content');
+    }
+
+    &__advantages {
+        margin-top: 4.9rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        grid-gap: 3.9rem 6.3rem;
+    }
+
+    &__item {
+        flex: 0 0 17rem;
+    }
+
+    &__btn {
+        margin-top: 6.4rem;
+        font-weight: 700;
+        font-size: 1.8rem;
+        padding: 1.2rem 5rem 1.3rem;
+    }
+    // End content side
+
+    // Bg side
+    &__bg-block {
+        position: absolute;
+        height: 100%;
+        width: 53.77%;
+        top: 0;
+        left: 0;
+    }
+
+    &__bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 100% 50%;
+    }
+    // End Bg side
+}
+
+@include media-1580 {
+    .get-access {
+        border-radius: 0;
+        display: block;
+
+        &__content-block {
+            flex-basis: 100%;
+            padding: 5rem 0;
+            margin-inline: auto;
+            width: min(64.4rem, calc(100% - 2rem));
+        }
+
+        &__bg-block {
+            width: 82%;
+            opacity: .1;
+        }
+
+        &__btn {
+            margin-top: 5rem;
+        }
+    }
+}
+
+@include media-959 {
+    .get-access {
+        &__bg-block {
+            display: none;
+        }
+
+        &__content-block {
+            width: calc(100% - 4rem);
+            padding: 4rem 0 5rem;
+        }
+
+        &__advantages {
+            margin-top: 5.9rem;
+            grid-gap: 3.9rem 2.2rem;
+            max-width: 60rem;
+        }
+    }
+}
+
+@include media-639 {
+    .get-access {
+        &__content-block {
+            width: 100%;
+            padding: 3rem 1.5rem 4rem 1rem;
+        }
+
+        &__advantages {
+            margin-top: 3.5rem;
+            grid-gap: 3.2rem;
+        }
+
+        &__item {
+            flex-basis: 100%;
+        }
+
+        &__btn {
+            margin-top: 3.5rem;
+            font-size: 1.6rem;
+            padding: 1.3rem 6.6rem 1.4rem;
+        }
+    }
+}

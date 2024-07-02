@@ -1,0 +1,88 @@
+@import "./libs";
+@import "../utils/mixins";
+@import "../utils/fonts";
+
+@import "../utils/vars.scss";
+
+
+// General
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--font-general);
+}
+
+body {
+    background-color: var(--color-main-bg);
+    background-image: url('/assets/images/bg.png');
+    background-repeat: repeat;
+}
+
+main {
+    max-width: 100vw;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    min-height: 100vh;
+    font-size: var(--fz-text-df);
+    line-height: var(--lh-text-df);
+}
+
+body > .container {
+    background: rgba(20, 24, 26, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+ul, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: $transition--general;
+    
+    &::before, &::after {
+        transition: $transition--general;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: 400;
+}
+
+button {
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section--light {
+    background-color: #FAF8EE00;
+}
+
+.line-hr-dashed {
+    border-top: .1rem dashed rgba(255, 255, 255, 0.1);
+}
+
+.page {
+    &__video-popular {
+        border-bottom: .1rem solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+@include media-1580 {
+    .page__hide-container-paddings.container--inner {
+        width: 100%;
+    }
+}

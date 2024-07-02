@@ -1,0 +1,17 @@
+mixin videoInfoItem--content(parentClass, mod, title, spriteName)
+    div(class= parentClass + ' video-info-item ' + mod)
+        if spriteName
+            .video-info-item__icon
+                +icon(spriteName)
+        //- End icon condition
+        span.video-info-item__value= title
+    //- End video info item (like duration, author)
+
+mixin videoInfoItem--link(parentClass, mod, title, spriteName)
+    a(class= parentClass + ' video-info-item ' + mod, href="/")
+        if spriteName
+            .video-info-item__icon
+                +icon(spriteName)
+        //- End icon condition
+        span.video-info-item__value= title
+    //- End video info item (like duration, author)

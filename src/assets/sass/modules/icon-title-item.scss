@@ -1,0 +1,227 @@
+
+.icon-title-item {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 133%;
+        text-transform: capitalize;
+
+        color: #FFFFFF;
+    }
+}
+
+.icon-title-item--features {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.056) 0%, rgba(255, 255, 255, 0.035) 98.41%);
+    border: .1rem solid rgba(255, 255, 255, 0.04);
+    border-radius: 1rem;
+    justify-content: space-between;
+    padding: 1.4rem 1.5rem 1.8rem;
+
+    .icon-title-item {
+        // Icon
+        &__icon {
+            &--4k-display {
+                width: 4.4rem;
+                height: 2.5rem;
+            }
+
+            &--hd-definition {
+                width: 4.7rem;
+                height: 2.5rem;
+            }
+
+            &--responsive-for-devices {
+                width: 2.4rem;
+                height: 3.4rem;
+            }
+
+            &--50-mp-photos {
+                width: 4.4rem;
+                height: 3.6rem;
+            }
+
+            &--fast-runtime {
+                width: 2.6rem;
+                height: 3.6rem;
+            }
+
+            &--support {
+                width: 3.6rem;
+                height: 3.6rem;
+            }
+        }
+        // End icon
+    }
+    // End inner
+}
+// End features item
+
+.icon-title-item--get-access {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 1rem;
+
+    .icon-title-item {
+        &__icon-wr {
+            height: 3.8rem;
+            display: flex;
+            align-items: center;
+        }
+
+        &__icon {
+            &--14-series {
+                width: 4rem;
+                height: 3.3rem;
+            }
+
+            &--unlim-downloads {
+                width: 3.8rem;
+                height: 3.8rem;
+            }
+
+            &--early-access {
+                width: 3.4rem;
+                height: 3.5rem;
+            }
+
+            &--premium-membership {
+                width: 3.8rem;
+                height: 3.8rem;
+            }
+
+            &--special-offer {
+                width: 3.3rem;
+                height: 3.1rem;
+            }
+        }
+        // End icon
+
+        &__title {
+            font-weight: 700;
+            font-size: 1.5rem;
+            line-height: 133%;
+            text-align: center;
+            text-transform: capitalize;
+
+            color: #FFFFFF;
+        }
+    }
+    // End inner
+}
+// End Get access item
+
+@include media-1580 {
+    .icon-title-item--features {
+        padding: 1.4rem 10.5rem 1.8rem 1.5rem;
+    }
+}
+
+@include media-959 {
+    .icon-title-item--features {
+        padding: 1.4rem 1.5rem 1.7rem;
+
+        .icon-title-item {
+            &__title {
+                br {
+                    display: none;
+                }
+            }
+        }
+        // End inner
+    }
+}
+
+@include media-639 {
+    .icon-title-item--features {
+        padding: 1.4rem 2.3rem 1.6rem 1.5rem;
+
+        .icon-title-item {
+            &__icon {
+                margin-left: auto;
+
+                &--4k-display {
+                    width: 3.6rem;
+                    height: 2rem;
+                }
+    
+                &--hd-definition {
+                    width: 3.8rem;
+                    height: 2rem;
+                }
+    
+                &--responsive-for-devices {
+                    width: 2.1rem;
+                    height: 2.9rem;
+                }
+    
+                &--50-mp-photos {
+                    width: 3.8rem;
+                    height: 3.1rem;
+                }
+    
+                &--fast-runtime {
+                    width: 2.2rem;
+                    height: 3.1rem;
+                }
+    
+                &--support {
+                    width: 3.1rem;
+                    height: 3.1rem;
+                }
+            }
+        }
+        // End inner
+    }
+
+    .icon-title-item--get-access {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+        .icon-title-item {
+            &__title {
+                br.hide-mobile {
+                    display: none;
+                }
+
+                text-align: left;
+            }
+
+            &__icon-wr {
+                height: auto;
+            }
+
+            &__icon {
+                &--14-series {
+                    width: 3rem;
+                    height: 2.5rem;
+                }
+    
+                &--unlim-downloads {
+                    width: 2.9rem;
+                    height: 2.9rem;
+                }
+    
+                &--early-access {
+                    width: 2.5rem;
+                    height: 2.6rem;
+                }
+    
+                &--premium-membership {
+                    width: 2.4rem;
+                    height: 2.3rem;
+                }
+    
+                &--special-offer {
+                    width: 2.9rem;
+                    height: 2.9rem;
+                }
+            }
+            // End icon
+        }
+        // End inner
+    }
+}

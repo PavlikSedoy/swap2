@@ -1,0 +1,23 @@
+.container {
+    width: min(calc(100vw - 6rem), 156rem);
+    margin-inline: auto;
+    font-size: var(--fz-text-df);
+    position: relative;
+}
+
+.container--inner {
+    width: min(138rem, calc(100% - 4rem));
+    margin-inline: auto;
+}
+
+@include media-959 {
+    .container {
+        width: min(calc(100% - 4rem), 156rem);
+    }
+}
+
+@include media-639 {
+    .container, .container--inner {
+        width: 100%;
+    }
+}

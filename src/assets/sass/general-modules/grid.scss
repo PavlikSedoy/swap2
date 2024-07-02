@@ -1,0 +1,103 @@
+.grid {
+    display: grid;
+}
+
+// XXL
+.grid-xxl--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-xxl--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-xxl--6-cols {
+    grid-template-columns: repeat(6, 1fr);
+}
+// END XXL
+
+// GAP`s
+.grid-gap--xxl-10 {
+    gap: 1rem;
+}
+
+.grid-gap--xxl-15 {
+    gap: 1.5rem;
+}
+
+.grid-gap--xxl-20 {
+    gap: 2rem;
+}
+
+.grid-gap--xxl-30-20 {
+    gap: 3rem 2rem;
+}
+
+.grid-gap--xxl-40 {
+    gap: 4rem;
+}
+// END GAP`s
+
+@include media-1580 {
+    .grid-gap--xl-10 {
+        gap: 1rem;
+    }
+
+    .grid-gap--xl-20 {
+        gap: 2rem;
+    }
+
+    .grid-gap--xl-18 {
+        gap: 1.8rem;
+    }
+
+    .grid-xl--3-cols {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@include media-1399 {
+    .grid--l-3-cols {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-gap--l-16 {
+        gap: 1.6rem;
+    }
+
+    .grid-gap--l-10 {
+        gap: 1rem;
+    }
+}
+
+@include media-959 {
+    .grid--m-2-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-gap--m-10 {
+        grid-gap: 1rem;
+    }
+}
+
+@include media-639 {
+    .grid-s--1-cols {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-gap--s-15 {
+        grid-gap: 1.5rem;
+    }
+
+    .grid-gap--s-20 {
+        grid-gap: 2rem;
+    }
+
+    .grid-gap--s-10 {
+        grid-gap: 1rem;
+    }
+
+    .grid-gap--s-5 {
+        grid-gap: .5rem;
+    }
+}

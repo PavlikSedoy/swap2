@@ -1,0 +1,46 @@
+.btn {
+    border: none;
+    border-radius: 5rem;
+    outline: none;
+    cursor: pointer;
+    transition: $transition--general;
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    line-height: 125%;
+    font-family: var(--font-title);
+    text-transform: capitalize;
+}
+
+// Font size
+.btn--size-df {
+    font-size: 1.6rem;
+}
+
+// Theme
+.btn--theme-dark {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    border: 1px dashed rgba(255, 255, 255, 0.25);
+
+    &:hover {
+        background: rgba(#9797974B, .3);
+        border-color: transparent;
+    }
+}
+
+.btn--theme-accent {
+    background: #EFC127;
+    color: #131617;
+
+    &:hover {
+        background: #D2A717;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
+
+@include media-1399 {
+    .btn--size-df {
+        font-size: 1.6rem;
+    }
+}

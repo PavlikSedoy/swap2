@@ -1,0 +1,20 @@
+//- - var accessPallet__parentClass = ''
+//- - var accessPallet__title = 'ACCESS DENIED'
+//- - var accessPallet__desc = 'You must be a member to access this video'
+//- - var accessPallet__btnName = 'Join Now'
+
+div(class= accessPallet__parentClass + ' access-pallet')
+    .access-pallet__blur-bg
+        +responsiveImage('access-pallet__blur-bg-img', '/assets/pics/hero-video-pallet', 'jpg')
+    .access-pallet__inner
+        .access-pallet__title= accessPallet__title
+        .access-pallet__desc= accessPallet__desc
+
+        - var btnParentClass = 'access-pallet__btn'
+        - var btnSize = '-xl'
+        - var btnTheme = 'accent'
+        - var btnName = accessPallet__btnName
+
+        include ./btn
+        //- a.btn.btn--bg-fill-reverse.access-pallet__btn-book(href="#")= accessPallet__btnName
+    //- End inner

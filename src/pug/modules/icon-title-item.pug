@@ -1,0 +1,14 @@
+mixin iconTitleItem--features(parentClass, spriteName, title)
+    div(class= parentClass + ' icon-title-item icon-title-item--features')
+        h4.icon-title-item__title!= title
+        +icon-class(spriteName, 'icon-title-item__icon icon-title-item__icon--' + spriteName)
+        //- End icon wrapper
+    //- End item
+
+mixin iconTitleItem--get-access(parentClass, spriteName, title)
+    div(class= parentClass + ' icon-title-item icon-title-item--get-access')
+        .icon-title-item__icon-wr
+            +icon-class(spriteName, 'icon-title-item__icon icon-title-item__icon--' + spriteName)
+        h4.icon-title-item__title!= title
+        //- End icon wrapper
+    //- End item

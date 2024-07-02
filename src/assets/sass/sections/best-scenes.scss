@@ -1,0 +1,128 @@
+.best-scenes {
+    display: flex;
+    flex-direction: column;
+    padding: 7rem 0 10rem;
+
+    // Content
+    &__list {
+        margin-top: 2rem;
+    }
+
+    &__btn {
+        margin: 4rem auto 0;
+        align-self: center;
+        padding: 2rem 5rem;
+        font-size: 2.4rem;
+    }
+}
+
+.best-scenes--vid-pop {
+    padding: 4rem 0;
+
+    .best-scenes {
+        &__list {
+            margin-top: 1.5rem;
+        }
+    }
+    // End inner
+}
+
+.best-scenes--best-scenes {
+    padding: 4rem 0 10rem;
+
+    .best-scenes {
+        &__list {
+            margin-top: 1.5rem;
+        }
+
+        &__btn {
+            padding: 2rem 7rem;
+            font-size: 1.8rem;
+        }
+    }
+    // End inner
+}
+
+@include media-1580 {
+    .best-scenes {
+        padding: 4rem 0 9rem;
+
+        &__list {
+            margin-top: 1.5rem;
+        }
+
+        &__item:nth-child(7), &__item:nth-child(8) {
+            display: none;
+        }
+    }
+
+    .best-scenes--vid-pop {
+        padding: 4rem 0;
+    }
+
+    .best-scenes--best-scenes {
+        .best-scenes {
+            &__btn {
+                font-size: 2.4rem;
+                padding: 2rem 5rem;
+            }
+        }
+    }
+}
+
+@include media-959 {
+    .best-scenes {
+        padding-bottom: 8rem;
+
+        &__item:nth-child(5), &__item:nth-child(6) {
+            display: none;
+        }
+
+        &__btn {
+            margin-top: 3rem;
+        }
+    }
+
+    .best-scenes--vid-pop {
+        padding-bottom: 4rem;
+    }
+
+    .best-scenes--best-scenes {
+        .best-scenes {
+            &__btn {
+                margin-top: 4rem;
+            }
+        }
+        // End inner
+    }
+}
+
+@include media-639 {
+    .best-scenes {
+        padding: 3rem 0 5rem;
+
+        &__title {
+            text-align: center;
+        }
+
+        &__item:nth-child(4) {
+            display: none;
+        }
+
+        &__btn {
+            font-size: 1.6rem;
+            padding: 1.3rem 6.6rem 1.4rem;
+        }
+    }
+
+    .best-scenes--best-scenes {
+        .best-scenes {
+            &__btn {
+                margin-top: 3rem;
+                font-size: 1.6rem;
+                padding: 1.3rem 6.6rem 1.4rem;
+            }
+        }
+        // End inner
+    }
+}

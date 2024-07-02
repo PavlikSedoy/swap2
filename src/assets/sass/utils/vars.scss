@@ -1,0 +1,20 @@
+// Transition
+$transition--general: .3s ease-in-out;
+
+:root {
+    --font-general: 'NotoSans', sans-serif;
+
+    // Coors
+    --color-main-bg: #141414;
+    --color-container-bg: #FFF2ED;
+    --color-accent: #F9B216;
+    --color-accent-ligth: #EFD5A4;
+    --color-white-transparent: rgba(255, 255, 255, .7);
+    --color-accent-text: #FFBB00;
+    --color-accent-text-dark: #582540;
+    --color-dark-module-bg: #100E0E;
+
+    // Font sizes and line height
+    --fz-text-df: 1.6rem;
+    --lh-text-df: 162%;
+}

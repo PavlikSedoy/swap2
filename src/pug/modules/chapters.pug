@@ -1,0 +1,12 @@
+- var chaptersList = ['100%', 'free use', 'AUTHENTIC', 'EXCLUSIVE CONTENT']
+
+nav.main-screen__chapters.chapters
+    ul.chapters__list
+        each chapter in chaptersList
+            li.chapters__item
+                a.chapters__item-link(href="/")
+                    span= chapter
+                    +icon-class('chapter-arrow', 'chapters__item-arrow')
+            //- End item
+        //- End loop
+    //- End list

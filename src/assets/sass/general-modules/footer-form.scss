@@ -1,0 +1,39 @@
+.footer-form {
+    &__title {
+        font-size: 1.6rem;
+        line-height: 138%;
+        color: #fff;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+
+    &__desc {
+        margin-top: 2rem;
+        font-size: 14px;
+        line-height: 171%;
+        color: rgba(255, 255, 255, 0.6);
+
+        p {
+            margin: 1.5rem 0 0;
+        }
+    }
+
+    &__field {
+        margin-top: 2.2rem;
+        position: relative;
+    }
+}
+
+@include media-959 {
+    .footer-form {
+        &__field {
+            margin-top: 1.5rem;
+        }
+
+        &__desc {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            width: min(30rem, 100%);
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.videos-preview {
+    padding-bottom: 4rem;
+
+    &__btn-wrapper {
+        margin-top: 3rem;
+        display: block;
+        text-align: center;
+    }
+
+    &__btn {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 2rem 7rem;
+        font-size: 1.8rem;
+    }
+}
+
+@include media-959 {
+    .videos-preview {
+        padding-bottom: 3.5rem;
+
+        &__btn-wrapper {
+            margin-top: 2.5rem;
+        }
+    }
+}
+
+@include media-639 {
+    .videos-preview {
+        padding: 0 0 3rem;
+
+        article:nth-child(4) {
+            display: none;
+        }
+
+        &__btn-wrapper {
+            margin-top: 2rem;
+        }
+
+        &__btn {
+            font-size: 1.6rem;
+            padding: 1.3rem 7.4rem 1.4rem;
+        }
+    }
+}

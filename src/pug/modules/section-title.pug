@@ -1,0 +1,15 @@
+mixin sectionTitle--def(parentClass, title)
+    h2(class= parentClass + ' section-title section-title--def')= title
+
+mixin sectionTitle--video(parentClass, title)
+    h2(class= parentClass + ' section-title section-title--video')= title
+
+mixin sectionTitle--sm(parentClass, title)
+    h3(class= parentClass + ' section-title section-title--sm')= title
+
+//- - var subtitleVal = 'Get VIP4K Premium and save'
+mixin sectionTitle--with-subtitle(parentClass, title, subtitle)
+    div(class= parentClass + ' section-title section-title--with-subtitle')
+        h2.section-title__title= title
+        h3.section-title__subtitle= subtitle
+    //- End title block

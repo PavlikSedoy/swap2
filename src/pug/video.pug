@@ -1,0 +1,24 @@
+extends template/main
+
+block variables
+	- var title = 'Mature Tutor Knows How To Grab A Student’s Interest!'
+
+block content
+	.container
+		include ./general-modules/mobile-nav
+		include ./general-sections/header
+		main
+			include ./sections/video-page/video
+			.page__video-popular
+				.container--inner
+					- var sectionType = 'video-popular'
+
+					include ./sections/home-page/best-scenes
+			.container--inner.page__video-best-scenes
+				- var sectionType = 'video-best-scenes'
+
+				include ./sections/home-page/best-scenes
+			//- End container
+		include ./general-sections/footer
+		include ./general-sections/copyright
+	//- End contaier

@@ -1,0 +1,21 @@
+.copyright {
+    font-size: 1.2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 3rem 2rem 2rem;
+
+    &__item:first-child {
+        line-height: 133%;
+    }
+
+    &__item:not(:first-child) {
+        line-height: 200%;
+        margin-top: 1.5rem;
+    }
+}
+
+@include media-639 {
+    .copyright {
+        padding: 3rem 1rem 2rem;
+    }
+}

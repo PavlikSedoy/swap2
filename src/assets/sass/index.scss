@@ -1,0 +1,44 @@
+@import "utils/main";
+
+// Modules---------------
+@import "utils/general-modules.scss";
+
+// Title
+@import "./modules/section-title.scss";
+
+// For banner slider
+@import "./modules/banner-slide.scss";
+@import "./modules/banner-slider.scss";
+
+// For chapters (beelow banner home slider)
+@import "./modules/chapters.scss";
+
+// For preview video items
+@import "./modules/square-pallet.scss";
+@import "./modules/video-info-item.scss";
+@import "./modules/video-rating.scss";
+@import "./modules/video-preview.scss";
+
+// Features
+@import "./modules/icon-title-item.scss";
+
+// Video block (video page)
+@import "./modules/player-block.scss";
+@import "./modules/access-pallet.scss";
+
+// Video page preview
+@import "./modules/logo-title-item.scss";
+
+// Sections------------------
+@import "utils/general-sections.scss";
+
+// Home page
+@import "./sections/main-screen.scss";
+@import "./sections/descritpion-section.scss";
+@import "./sections/videos-preview.scss";
+@import "./sections/features.scss";
+@import "./sections/get-access.scss";
+@import "./sections/best-scenes.scss";
+
+// Video page
+@import "./sections/video-full.scss";

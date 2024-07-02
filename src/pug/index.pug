@@ -1,0 +1,24 @@
+extends template/main
+
+block variables
+	- var title = 'Welcome to Ignore4k!'
+
+block content
+	.container
+		include ./general-modules/mobile-nav
+		include ./general-sections/header
+		main
+			include ./sections/home-page/main-screen
+			.container--inner
+				include ./sections/home-page/page-description
+				include ./sections/home-page/videos-preview
+			.line-hr-dashed
+			.container--inner
+				include ./sections/home-page/features
+			.container--inner.page__hide-container-paddings
+				include ./sections/home-page/get-access
+			.container--inner
+				include ./sections/home-page/best-scenes
+		include ./general-sections/footer
+		include ./general-sections/copyright
+	//- End contaier

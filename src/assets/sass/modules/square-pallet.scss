@@ -1,0 +1,55 @@
+.square-pallet {
+    background: #131617;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .3rem;
+}
+
+// MODS
+.square-pallet--type_time {
+    font-size: 1.1rem;
+    line-height: 1;
+    color: #F6F0E7;
+    padding: .3rem;
+    border-radius: 1px;
+}
+
+
+// By size
+.square-pallet--size_xl {
+    width: 6.4rem;
+    height: 4.4rem;
+    
+    svg {
+        width: 4.4rem;
+        height: 100%;
+    }
+}
+
+// END MODS
+
+@include media-1580 {
+    .square-pallet--size_xl {
+        width: 5rem;
+        height: 3.5rem;
+
+        svg {
+            width: 3.5rem;
+            height: 2.1rem;
+        }
+        // End inner
+    }
+}
+
+@include media-959 {
+    .square-pallet--size_xl {
+        width: 4rem;
+        height: 2.8rem;
+
+        svg {
+            width: 2.8rem;
+            height: 1.7rem;
+        }
+    }
+}

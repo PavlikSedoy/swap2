@@ -1,0 +1,15 @@
+mixin squarePallet--xl(parentClass)
+    div(class= parentClass + ' square-pallet square-pallet--size_xl square-pallet--type_4k')
+        +icon('4k-icon')
+    //- End inner
+
+//- mixin squarePallet--l(parentClass, value)
+//-     div(class= parentClass + ' square-pallet square-pallet--size_l square-pallet--type_time')= value
+
+//- L size
+//- if squarePalletSize == 'l'
+//-     if squarePalletContent == '4k'
+//-         div(class= squarePalletParentClass + ' square-pallet square-pallet--size_l square-pallet--type_4k')
+//-             +icon('4k-icon')
+//-     else
+//-         div(class= squarePalletParentClass + ' square-pallet square-pallet--size_l square-pallet--type_time')= squarePalletContent

@@ -1,0 +1,15 @@
+.general-slider
+    .general-slider__slider.banner-slider.swiper#homeScreenSlider
+        .swiper-wrapper
+            each slide in [1,2,3]
+                include ./banner-slide
+            //- End loop
+        //- End swiper wrapper
+
+        .banner-slider__nav-wrapper
+            button.swiper-button-prev.banner-slider__nav-btn#homeScreenSlider-prev
+                +icon-class('home-slider-prev', 'banner-slider__nav-btn-icon')
+            button.swiper-button-next.banner-slider__nav-btn#homeScreenSlider-next
+                +icon-class('home-slider-next', 'banner-slider__nav-btn-icon')
+        //- End nav wrapper
+    //- End swiper

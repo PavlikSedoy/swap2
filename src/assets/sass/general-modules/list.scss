@@ -1,0 +1,83 @@
+$list__ul_margin: 2.2rem;
+$list__item_margin: 1.2rem;
+$list__link_color: rgba(255,255,255, .6);
+$list__link--hover_color: #fff;
+
+.list {
+    &__title {
+        @extend .footer-form__title;
+    }
+
+    &__ul {
+        margin-top: 2rem;
+    }
+
+    &__item:not(:first-child) {
+        margin-top: 1.7rem;
+    }
+
+    &__link {
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 171%;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+@include media-959 {
+    .list {
+        &__title {
+            display: inline-block;
+            position: relative;
+            transition: $transition--general;
+
+            &::after {
+                @include pseudo;
+                top: .7rem;
+                right: -1.7rem;
+                height: .8rem;
+                width: .6rem;
+                transition: $transition--general;
+                transform: rotate(-180deg);
+                background: 50% 50%/contain no-repeat url('/assets/svg/list-item-arrow.svg');
+            }
+
+            &:hover {
+                cursor: pointer; 
+            }
+        }
+        // End title
+
+        &__item:first-child {
+            margin-top: 1.5rem;
+        }
+
+        &__item:not(:first-child) {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+        }
+
+        &__item:last-child {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .list--disabled {
+        .list {
+            &__title {
+                &::after {
+                    transform: rotate(0);
+                }
+            }
+
+            &__ul {
+                max-height: 0;
+                visibility: hidden;
+                overflow: hidden;
+            }
+        }
+        // End inner
+    }
+}

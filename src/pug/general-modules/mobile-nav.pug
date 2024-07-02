@@ -1,0 +1,21 @@
+- var lngItems = [{flag: 'flag-ru.svg', name: 'Russian'}, {flag: 'flag-en.svg', name: 'English'}, {flag: 'flag-es.svg', name: 'Spanish'}, {flag: 'flag-de.svg', name: 'German'}, {flag: 'flag-fr.svg', name: 'French'}, {flag: 'flag-it.svg', name: 'Italian'}]
+
+//- .mobile-nav.mobile-nav--active
+ul.mobile-nav#mobileNav
+    li.mobile-nav__item
+        a.mobile-nav__link.mobile-nav__link--accent(href="/") Join Now
+    li.mobile-nav__item
+        a.mobile-nav__link(href="/") Login
+    li.mobile-nav__item.mobile-nav__item--lng.mobile-lng
+        button.mobile-lng__choose-btn.mobile-lng__item
+            img.mobile-lng__item-flag(src="/assets/svg/flags/usa.svg", alt="USA flag")
+        ul.mobile-lng__list
+            each item, key in lngItems
+                li.mobile-lng__item
+                    a.mobile-lng__item-link(href="/")
+                        span.mobile-lng__item-lng= item.name
+                        img.mobile-lng__item-flag(src="/assets/svg/flags/" + item.flag, alt= item.name + " flag")
+                //- End item
+            //- End loop
+        //- End mobile language list
+    //- End item

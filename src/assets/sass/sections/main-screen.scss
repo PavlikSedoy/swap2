@@ -1,0 +1,7 @@
+@include media-639 {
+    .main-screen {
+        &__chapters {
+            display: none;
+        }
+    }
+}
