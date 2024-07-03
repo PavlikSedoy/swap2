@@ -41,7 +41,7 @@ $list__link--hover_color: #fff;
                 width: .6rem;
                 transition: $transition--general;
                 transform: rotate(-180deg);
-                background: 50% 50%/contain no-repeat url('/assets/svg/list-item-arrow.svg');
+                // background: 50% 50%/contain no-repeat url('@svg/list-item-arrow.svg');
             }
 
             &:hover {

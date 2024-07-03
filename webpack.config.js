@@ -65,9 +65,6 @@ const plugins = () => {
 const cssLoaders = extra => {
   const loaders = [{
     loader: MiniCssExtractPlugin.loader,
-    options: {
-      esModule: true,
-  }
   }, 'css-loader'];
 
   if (extra) {

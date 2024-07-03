@@ -1,6 +1,6 @@
 .lng-swtch {
     position: relative;
-
+    
     &__active {
         background: transparent;
         border: none;
@@ -8,23 +8,22 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: .9rem 1.7rem;
-        border: 1px dashed rgba(255, 255, 255, 0.25);
-        border-radius: 5rem;
         cursor: pointer;
-        transition: $transition--general;
+        transition: var(--transition);
+        gap: 1rem;
 
-        &-name {
-            font-family: var(--font-title);
-            font-size: 1.7rem;
-            line-height: 135%;
-            opacity: .8;
-            text-transform: uppercase;
+        &-icon {
+            transition: var(--transition);
+        }
+
+        &-icon svg  {
+            width: 1.08rem;
+            height: 0.6rem;
         }
 
         &-flag-wr {
-            width: 3rem;
-            height: 3rem;
+            width: 3.05rem;
+            height: 2rem;
         }
 
         &-flag {
@@ -33,51 +32,55 @@
             object-fit: contain;
         }
 
-        &-arrow {
-            margin-left: .8rem;
-            width: .6rem;
-            height: 0.8rem;
-            display: inherit;
-
-            svg {
-                width: 100%;
-                height: auto;
-                max-height: 100%;
-                transition: $transition--general;
-            }
-        }
-        // End arrow
-
         &:hover {
-            background: rgba(#9797974B, .3);
-            border-color: transparent;
+            opacity: .7;
+        }
+
+        &--active {
+            .lng-swtch__active {
+                &-icon {
+                    transform: rotate(180deg);
+                }
+            }
         }
     }
     // End current language button
 
     &__list {
         position: absolute;
-        right: 0;
-        top: calc(100% + .8rem);
+        left: 0;
+        top: 100%;
+        width: 100%;
         z-index: z('content');
     }
-
-    &__active--active {
-        .lng-swtch {
-            &__active-arrow {
-                svg {
-                    transform: rotate(180deg);
-                }
-            }
-        }
-        // End inner
-    }
 }
+// End inner
 
-@include media-959 {
+@include media-M {
     .lng-swtch {
         &__active {
-            padding: .6rem 1.7rem;
+            &-flag-wr {
+                width: 4.6rem;
+                height: 3rem;
+            }
+        }
+
+        &__list {
+            top: calc(100% + .6rem);
+            width: 24rem;
+            left: -1.5rem;
         }
     }
+    // End inner
 }
+// End M
+
+@include media-L {
+    .lng-swtch {
+        &__list {
+            top: calc(100% + 1rem);
+        }
+    }
+    // End inner
+}
+// End L

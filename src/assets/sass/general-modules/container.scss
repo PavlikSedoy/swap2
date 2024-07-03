@@ -1,23 +1,30 @@
 .container {
-    width: min(calc(100vw - 6rem), 156rem);
-    margin-inline: auto;
-    font-size: var(--fz-text-df);
-    position: relative;
+    width: 100%;
 }
 
-.container--inner {
-    width: min(138rem, calc(100% - 4rem));
-    margin-inline: auto;
-}
-
-@include media-959 {
+@include media-M {
     .container {
         width: min(calc(100% - 4rem), 156rem);
+        margin-inline: auto;
     }
+    // End inner
 }
+// End M
 
-@include media-639 {
-    .container, .container--inner {
-        width: 100%;
+@include media-L {
+    .container {
+        width: min(calc(100% - 6rem), 156rem);
+        margin-inline: auto;
     }
+    // End inner
 }
+// End M
+
+@include media-XL {
+    .container {
+        width: min(calc(100% - 4rem), 156rem);
+        margin-inline: auto;
+    }
+    // End inner
+}
+// End M

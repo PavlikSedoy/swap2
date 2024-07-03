@@ -1,28 +1,31 @@
 .header {
     width: 100%;
-    padding: 1.5rem 3.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: .7rem 1rem .8rem;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
     &__left-wr {
         display: flex;
+        flex-direction: column;
+        gap: .4rem;
     }
 
     &__logo {
-        width: 27.8rem;
-        height: 5.5rem;
+        width: 11.89rem;
+        height: 2.4rem;
 
         svg {
-            width: 100%;
-            height: 100%;
+            @include square(100%)
         }
     }
 
     &__part-title {
-        margin: auto auto .5rem 2rem;
-        width: 21.5rem;
-        height: 2.2rem;
+        width: 11.7rem;
+        height: 1.2rem;
 
         svg {
             width: 100%;
@@ -30,115 +33,136 @@
         }
     }
 
-    &__lng-swtch {
-        margin: 0 2rem 0 auto;
-    }
-
-    &__member-area {
-        display: flex;
+    &__buttons-wr {
+        margin: 0 3rem 0 auto;
     }
 
     &__login-btn, &__join-btn {
-        padding: 1.4rem 5.1rem 1.4rem;
-    }
-
-    &__join-btn {
-        margin-left: 2rem;
+        display: none;
     }
 
     &__hamburger {
-        display: none;
-    }
-}
-
-@include media-1580 {
-    .header {
-        padding: 1.5rem 2rem;
-
-        &__logo {
-            width: 23.3rem;
-            height: 4.6rem;
-        }
-
-        &__part-title {
-            margin-left: 1rem;
-            width: 16.1rem;
-            height: 1.6rem;
-        }
-
-        &__lng-swtch {
-            margin-right: 1.5rem;
-        }
-
-        &__login-btn {
-            padding: 1.2rem 4rem;
-        }
-
-        &__join-btn {
-            margin-left: 1.5rem;
-            padding: 1.2rem 4.5rem;
+        width: 2.3rem;
+        height: 2rem;
+        svg {
+            @include square(100%);
         }
     }
 }
+// End inner
 
-@include media-959 {
+@include media-M {
     .header {
-        padding: 1rem 2rem .9rem;
-
+        padding: .7rem 1rem .55rem;
+    
         &__left-wr {
-            flex-direction: column;
+            gap: .5rem;
+        }
+    
+        &__logo {
+            width: 14.9rem;
+            height: 3rem;
+        }
+    
+        &__part-title {
+            width: 14.8rem;
+            height: 1.5rem;
+            margin-left: 0.1rem;
+        }
+    
+        &__buttons-wr {
+            display: flex;
+            flex-direction: row;
             align-items: center;
+            margin: 0 0 0 auto;
         }
-
-        &__logo {
-            width: 19.8rem;
-            height: 3.9rem;
+    
+        &__login-btn {
+            display: flex;
+            margin-inline: 3rem 2.77rem;
         }
-
-        &__part-title {
-            margin: .2rem auto 0;
-            width: 16.1rem;
-            height: 1.6rem;
-        }
-
-        &__login-btn, &__join-btn {
-            font-size: 1.4rem;
-            padding: 1.1rem 1.5rem 1.2rem;
-        }
-    }
-}
-
-@include media-639 {
-    .header {
-        padding: .9rem 1.5rem .9rem 1rem;
         
-        &__logo {
-            width: 16.3rem;
-            height: 3.3rem;
+        &__join-btn {
+            display: block;
+            font-size: 1.6rem;
+            line-height: 150%;
+            font-weight: 500;
+            padding: .5rem 2rem;
         }
-
-        &__part-title {
-            margin: 0.1rem 0 0;
-        }
-
-        &__lng-swtch, &__member-area {
+    
+        &__hamburger {
             display: none;
         }
+    }
+    // End inner
+}
+// End M
 
-        &__hamburger {
-            display: block;
-            width: 2.7rem;
-            height: 2rem;
-            transition: .3s ease-in-out;
-
-            svg {
-                width: 100%;
-                height: 100%;
-            }
-
-            &--active {
-                transform: rotate(90deg);
-            }
+@include media-L {
+    .header {
+        padding: 1rem;
+    
+        &__left-wr {
+            flex-direction: row;
+            align-items: flex-end;
+            gap: 1rem;
+        }
+    
+        &__logo {
+            width: 19.9rem;
+            height: 4rem;
+        }
+    
+        &__part-title {
+            width: 16.1rem;
+            height: 1.6rem;
+            margin: 0 0 0.7rem;
+        }
+    
+        &__login-btn {
+            margin-inline: 4rem 3.77rem;
+        }
+        
+        &__join-btn {
+            padding: 1rem 4rem;
         }
     }
+    // End inner
 }
+// End L
+
+@include media-XL {
+    .header {
+        padding: 1.2rem 2rem;
+
+    
+        &__logo {
+            width: 26.9rem;
+            height: 5.4rem;
+        }
+    
+        &__part-title {
+            width: 21.5rem;
+            height: 2.2rem;
+            margin: 0 0 0.3rem;
+        }
+    
+        &__login-btn {
+            margin-inline: 6rem 5.77rem;
+        }
+        
+        &__join-btn {
+            padding: 1rem 8rem;
+        }
+    }
+    // End inner
+}
+// End XL
+
+@include media-XXL {
+    .header {
+        padding: 1.2rem 4rem;
+    }
+    // End inner
+}
+// End XXL

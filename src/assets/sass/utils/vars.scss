@@ -2,19 +2,18 @@
 $transition--general: .3s ease-in-out;
 
 :root {
-    --font-general: 'NotoSans', sans-serif;
+    --font-general: 'Inter', sans-serif;
+    --font-odd: 'Montserrat', sans-serif;
 
-    // Coors
-    --color-main-bg: #141414;
-    --color-container-bg: #FFF2ED;
-    --color-accent: #F9B216;
-    --color-accent-ligth: #EFD5A4;
-    --color-white-transparent: rgba(255, 255, 255, .7);
-    --color-accent-text: #FFBB00;
-    --color-accent-text-dark: #582540;
-    --color-dark-module-bg: #100E0E;
+    --transition: .3s ease-in-out;
 
-    // Font sizes and line height
-    --fz-text-df: 1.6rem;
-    --lh-text-df: 162%;
+    // Colors
+    --color__accent: #FFCC00;
+    --color__accent-hover: #FFCB1E;
+    --color__vivid-accent: #FFD447;
+    --color__heading-text: #FFF;
+    --color__main-bg: #161617;
+    --color__odd-bg: #000000;
+    --color__main-text: rgba(255, 255, 255, 0.70);
+    --color__small-blocks: rgba(255, 255, 255, 0.08);
 }

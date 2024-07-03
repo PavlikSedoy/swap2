@@ -1,4 +1,3 @@
-@import "./libs";
 @import "../utils/mixins";
 @import "../utils/fonts";
 
@@ -16,9 +15,7 @@ html {
 }
 
 body {
-    background-color: var(--color-main-bg);
-    background-image: url('/assets/images/bg.png');
-    background-repeat: repeat;
+    background-color: var(--color__odd-bg);
 }
 
 main {
@@ -26,13 +23,17 @@ main {
     overflow: hidden;
     scroll-behavior: smooth;
     min-height: 100vh;
-    font-size: var(--fz-text-df);
-    line-height: var(--lh-text-df);
 }
 
 body > .container {
-    background: rgba(20, 24, 26, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.11);
+    background: var(--color__main-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@include media-XL {
+    body > .container {
+        border-radius: 3px;
+    }
 }
 
 ul, li {
@@ -43,14 +44,14 @@ ul, li {
 
 a {
     text-decoration: none;
-    transition: $transition--general;
+    transition: var(--transition);
     
     &::before, &::after {
-        transition: $transition--general;
+        transition: var(--transition);
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     font-weight: 400;
 }
@@ -60,29 +61,30 @@ button {
 }
 
 img {
+    display: block;
     max-width: 100%;
 }
 
-.text-center {
-    text-align: center;
-}
+// .text-center {
+//     text-align: center;
+// }
 
-.section--light {
-    background-color: #FAF8EE00;
-}
+// .section--light {
+//     background-color: #FAF8EE00;
+// }
 
-.line-hr-dashed {
-    border-top: .1rem dashed rgba(255, 255, 255, 0.1);
-}
+// .line-hr-dashed {
+//     border-top: .1rem dashed rgba(255, 255, 255, 0.1);
+// }
 
-.page {
-    &__video-popular {
-        border-bottom: .1rem solid rgba(255, 255, 255, 0.1);
-    }
-}
+// .page {
+//     &__video-popular {
+//         border-bottom: .1rem solid rgba(255, 255, 255, 0.1);
+//     }
+// }
 
-@include media-1580 {
-    .page__hide-container-paddings.container--inner {
-        width: 100%;
-    }
-}
+// @include media-1580 {
+//     .page__hide-container-paddings.container--inner {
+//         width: 100%;
+//     }
+// }

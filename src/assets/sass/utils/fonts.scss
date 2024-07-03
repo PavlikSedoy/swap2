@@ -1,3 +1,2 @@
-@include font-face('NotoSans', '/assets/fonts/NotoSans/NotoSans-Regular/NotoSans-Regular', $weight: 400, $style: normal, $asset-pipeline: false );
-@include font-face('NotoSans', '/assets/fonts/NotoSans/NotoSans-Bold/NotoSans-Bold', $weight: 700, $style: normal, $asset-pipeline: false );
-@include font-face('NotoSans', '/assets/fonts/NotoSans/NotoSans-Black/NotoSans-Black', $weight: 900, $style: normal, $asset-pipeline: false );
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');

@@ -1,5 +1,7 @@
 // core version + navigation, pagination modules:
-import Swiper, { Navigation } from 'swiper'
+import 'swiper/swiper-bundle.css';
+import Swiper from 'swiper'
+import { Navigation } from 'swiper/modules'
 
 // init Swiper:
 new Swiper('#homeScreenSlider', {

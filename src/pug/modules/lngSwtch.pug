@@ -1,21 +1,28 @@
-- var lngItems = [{flag: 'ru', name: 'Russian'}, {flag: 'en', name: 'English'}, {flag: 'es', name: 'Spanish'}, {flag: 'de', name: 'German'}, {flag: 'fr', name: 'French'}, {flag: 'it', name: 'Italian'}]
+mixin lngSwtch(parentClass, lngItems)
+    div(class= parentClass + " lng-swtch")
+        button.lng-swtch__active#lngSwtchBtn
+            .lng-swtch__active-flag-wr
+                img.swtch-list__flag(src="./assets/svg/flags/flag-en.svg", alt="USA flag")
+            .lng-swtch__active-icon 
+                +icon('arrow-down')
+        //- End active
 
-div(class= lngSwtch + " lng-swtch")
-    button.lng-swtch__active#lngSwtchBtn
-        .lng-swtch__active-flag-wr
-            img.swtch-list__flag(src="/assets/svg/flags/flag-en.svg", alt="USA flag")
-            //- +responsiveImage--oneSize('lng-swtch__active-flag', '/assets/pics/lng-flags/en', '.png')
-    //- End active
-
-    //- Switcher dropdown
-    ul.lng-swtch__list.swtch-list#lngSwtchDropdown
-        each item in lngItems
-            li.swtch-list__item
-                a.swtch-list__link(href="/")
-                    .swtch-list__flag-wr
-                        img.swtch-list__flag(src="/assets/svg/flags/flag-" + item.flag + '.svg', alt= item.name + " flag")
-                    .swtch-list__country-name= item.name
-            //- End item
-        //- End loop
-    //- End Switcher dropdown
-//- End language switcher
+        //- Switcher dropdown
+        ul.lng-swtch__list.swtch-list#lngSwtchDropdown
+            each item, index in lngItems
+                if index == 0
+                    li.swtch-list__item.active
+                        a.swtch-list__link(href="/")
+                            .swtch-list__flag-wr
+                                img.swtch-list__flag(src="./assets/svg/flags/flag-" + item.flag + '.svg', alt= item.name + " flag")
+                            .swtch-list__country-name= item.name
+                else 
+                    li.swtch-list__item
+                        a.swtch-list__link(href="/")
+                            .swtch-list__flag-wr
+                                img.swtch-list__flag(src="./assets/svg/flags/flag-" + item.flag + '.svg', alt= item.name + " flag")
+                            .swtch-list__country-name= item.name
+                //- End item
+            //- End loop
+        //- End Switcher dropdown
+    //- End language switcher

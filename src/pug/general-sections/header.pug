@@ -1,20 +1,42 @@
+//- header.header#header
+//-     .header__left-wr
+//-         a.header__logo(href="/")
+//-             include ../../assets/devSvg/logo.svg
+//-         //- End logo
+
+//-         .header__part-title
+            
+//-     //- End left wrapper
+
+//-     - var lngSwtch = 'header__lng-swtch'
+//-     include ../modules/lngSwtch
+
+//-     .header__member-area
+//-         a.header__login-btn.btn.btn--size-df.btn--theme-dark(href="/") Login
+//-         a.header__join-btn.btn.btn--size-df.btn--theme-accent(href="/") Join Now
+
+//-     .header__hamburger#hamburger
+//-         +icon('hamburger')
+//-     //- End member info
+
 header.header#header
-    .header__left-wr
-        a.header__logo(href="/")
-            include ../../assets/devSvg/logo.svg
-        //- End logo
+    .header__container
+        .header__left-wr
+            a.header__logo(href="/")
+                +icon('logo')
+            //- End logo
 
-        .header__part-title
-            include ../../assets/devSvg/network-line.svg
-    //- End left wrapper
+            .header__part-title
+                include ../../assets/devSvg/network-line.svg
+        //- End left wrapper
 
-    - var lngSwtch = 'header__lng-swtch'
-    include ../modules/lngSwtch
+        .header__buttons-wr
+            +lngSwtch('header__lng-swtch', [{flag: 'en', name: 'English'}, {flag: 'es', name: 'Spanish'}, {flag: 'de', name: 'German'}, {flag: 'fr', name: 'French'}, {flag: 'it', name: 'Italian'}])
+            +login-btn('header__login-btn')
+            a.header__join-btn.btn.btn--theme_accent(href="/") Join Now
+        //- End header btns
 
-    .header__member-area
-        a.header__login-btn.btn.btn--size-df.btn--theme-dark(href="/") Login
-        a.header__join-btn.btn.btn--size-df.btn--theme-accent(href="/") Join Now
-
-    .header__hamburger#hamburger
-        +icon('hamburger')
-    //- End member info
+        .header__hamburger#hamburger
+            +icon('hamburger')
+        //- End member info
+    //- End inner
