@@ -1,6 +1,7 @@
 .header {
     width: 100%;
     padding: .7rem 1rem .8rem;
+    position: relative;
 
     &__container {
         display: flex;
@@ -35,6 +36,7 @@
 
     &__buttons-wr {
         margin: 0 3rem 0 auto;
+        // position: relative;
     }
 
     &__login-btn, &__join-btn {

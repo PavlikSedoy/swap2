@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="21" viewBox="0 0 32 21">
-  <g fill="none">
-    <polygon fill="#F0F0F0" points="20.959 .02 10.479 .02 0 .02 0 20.979 10.479 20.979 20.959 20.979 31.439 20.979 31.439 .02"/>
-    <rect width="10.479" height="20.959" y=".02" fill="#6DA544"/>
-    <rect width="10.479" height="20.959" x="20.959" y=".02" fill="#D80027"/>
-  </g>
+<svg width="46" height="30" viewBox="0 0 46 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group">
+<path id="Vector" d="M3.42923 0C1.53526 0 0 1.53526 0 3.42923V26.5703C0 28.4642 1.53526 29.9995 3.42923 29.9995H15.2629V0H3.42923Z" fill="#73AF00"/>
+<path id="Vector_2" d="M15.2632 0.000244141H30.5264V29.9999H15.2632V0.000244141Z" fill="#F5F5F5"/>
+<path id="Vector_3" d="M42.3594 0H30.5257V29.9995H42.3594C44.2533 29.9995 45.7886 28.4642 45.7886 26.5702V3.42923C45.7886 1.53526 44.2534 0 42.3594 0Z" fill="#FF4B55"/>
+</g>
 </svg>
