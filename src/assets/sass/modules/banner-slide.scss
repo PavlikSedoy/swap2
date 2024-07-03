@@ -1,20 +1,38 @@
 .banner-slide {
+    position: relative;
     picture {
-        display: flex;
-        flex-direction: column;
-        position: relative;
+        position: absolute;
+        @include push-full;
     }
 
     &__img {
+        @include cover-image;
+    }
+
+    &::after {
+        @include pseudo(block, relative);
         width: 100%;
+        padding-top: 43%;
     }
 }
+// End inner
 
-@include media-1399 {
+@include media-M {
     .banner-slide {
-        picture {
-            display: block;
-            margin-bottom: -.8rem;
+        &::after {
+            padding-top: 42.7%;
         }
     }
+    // End inner
 }
+// End M
+
+@include media-XL {
+    .banner-slide {
+        &::after {
+            padding-top: 31.9%;;
+        }
+    }
+    // End inner
+}
+// End XL
