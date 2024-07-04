@@ -1,25 +1,25 @@
 footer.footer
-    .container--inner.footer__container
+    .footer__container
         include ../general-modules/footer-form
         //- End form
         
         nav.footer__nav
-            - var listTitle = 'Terms and conditions'
-            - var list = ['2257 Documents', 'Privacy policy', 'Terms and Conditions', 'DMCA', 'Content removal']
+            - var listTitle = 'Terms & conditions'
+            - var list = ['2257 Documents', 'Privacy policy', 'Terms & Conditions', 'DMCA', 'Content removal']
             - var listParentClass = 'footer__list-item'
-            include ../general-modules/list
+            +list(listParentClass, listTitle, list)
             //- End nav list item
 
-            - var listTitle = 'Account services'
-            - var list = ['Affilate program', 'Customer support', 'Lost password', 'Join now', 'Login']
+            - var listTitle = 'Account & services'
+            - var list = ['Affilate program', 'Customer support', 'Producers', 'Lost password', 'Join now', 'Login']
             - var listParentClass = 'footer__list-item'
-            include ../general-modules/list
+            +list(listParentClass, listTitle, list)
             //- End nav list item
             
             - var listTitle = 'Follow us'
-            - var list = ['Instagram', 'Twitter', 'Moms Tube']
+            - var list = ['Twitter','Telegram', 'Free Access', 'Mature Tube', 'Porn Videos']
             - var listParentClass = 'footer__list-item'
-            include ../general-modules/list
+            +list(listParentClass, listTitle, list)
             //- End nav list item
-        //- End footer nav
+        //- footer__nav
 //- End footer

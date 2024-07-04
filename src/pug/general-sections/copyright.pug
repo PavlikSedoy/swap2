@@ -1,8 +1,15 @@
 - var copyrightItems = ['Huge Media s.r.o, Domazlicka 1232/3,<br> Prague 13000, Czechia', 'Please visit Epoch | SegPay | Vendo, our authorized sales agents.', '2019 © SIS.PORN, All Rights Reserved. Users are prohibited from posting any material depicting individuals under the age of 18.']
 
 .copyright
-    ul.copyright__list
-        each item in copyrightItems
-            li.copyright__item!= item
-        //- End loop
-    //- End list
+    .copyright__container
+        .copyright__row
+            .copyright__image 
+                picture 
+                    img(src="./assets/images/copyright.png", alt="", loading="lazy")
+        .copyright__row Please visit <a href="/">Epoch</a> |  <a href="/">SegPay</a>, our authorized sales agents.
+        .copyright__row 
+            .copyright__rta-logo 
+                +icon('rta-logo')
+        .copyright__row 2024 © SHAME4K.COM, All Rights Reserved.
+        .copyright__row 
+            a(href="/") Authorised Payment Processor Vendo

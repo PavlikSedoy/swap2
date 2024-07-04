@@ -9,35 +9,40 @@
     .custom-input {
         &__field {
             font-size: 1.2rem;
-            line-height: 200%;
-            color: rgba(255,255,255,.5);
-            background: #141618;
-            border: .1rem solid rgba(255, 255, 255, 0.04);
-            border-radius: 7rem;
-            padding: 1.3rem 13.2rem 1.3rem 2rem;
+            line-height: 241.6%;
+            color: var(--color__heading-text);
+            background: #222;
+            border-radius: .2rem;
+            padding: .8rem 9.6rem .9rem .95rem;
+            border: none;
+            outline: none;
+
+            @include placeholder {
+                color: rgba(255, 255, 255, 0.30);
+            }
         }
 
         &__btn {
             position: absolute;
             @include push--middle;
-            right: 0.7rem;
-            padding: .6rem 1.9rem;
+            right: 0;
+            padding: .8rem 1rem;
             font-size: 1.4rem;
-            line-height: 171%;
+            line-height: 207%;
+            height: 100%;
+            font-weight: 500;
         }
     }
-    // End inner
 }
+// End inner
 
-@include media-639 {
+@include media-M {
     .custom-input--with-btn-in {
         .custom-input {
             &__btn {
-                padding: 1rem 1rem 1.1rem;
-                font-size: 1.1rem;
-                line-height: 137%;
+                padding: .8rem 2rem .8rem 2.5rem;
             }
         }
-        // End inner
     }
+    // End inner
 }
