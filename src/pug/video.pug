@@ -9,15 +9,10 @@ block content
 		include ./general-modules/mobile-nav
 		main
 			include ./sections/video-page/video
-			.page__video-popular
-				.container--inner
-					- var sectionType = 'video-popular'
-
-					include ./sections/home-page/best-scenes
-			.container--inner.page__video-best-scenes
-				- var sectionType = 'video-best-scenes'
-
-				include ./sections/home-page/best-scenes
+			- var sectionType = 'video-popular'
+			include ./sections/home-page/best-scenes
+			- var sectionType = 'video-best-scenes'
+			include ./sections/home-page/best-scenes
 			//- End container
 		include ./general-sections/footer
 		include ./general-sections/copyright

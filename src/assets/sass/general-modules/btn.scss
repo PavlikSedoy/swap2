@@ -51,6 +51,8 @@
 
         &:hover {
             color: var(--color__heading-text);
+            border-color: var(--color__heading-text);
+            background-color: transparent;
 
             svg {
                 fill: var(--color__heading-text);

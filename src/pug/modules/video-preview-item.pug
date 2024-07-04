@@ -1,4 +1,4 @@
-mixin videoPreview--xl(parentClass, imgPath, title, fullRating)
+mixin videoPreview--xl(parentClass, imgPath, title)
     article(class= parentClass + ' video-preview video-preview--size-xl')
         a.video-preview__pic-block(href="/")
             .video-preview__pic-inner
@@ -10,9 +10,10 @@ mixin videoPreview--xl(parentClass, imgPath, title, fullRating)
                     video.video-preview__video(width="100%", preload="none", playsinline="" muted="")
                         source(src="https://v.black4k.com/content/previews/72e36d7d-9a3c-436b-a40c-f7580d24b9a8/eae86a67-e136-447c-b39a-a7e26c69a2e4.mp4", type="video/mp4")
                 //- End video
+                +squarePallet--xl('video-preview__square-pallet')
             //- End picture inner
             
-            +squarePallet--xl('video-preview__square-pallet')
+            
         //- End picture wrapper
         .video-preview__text-content
             a.video-preview__name(href="/", title="link title")= title
@@ -21,25 +22,32 @@ mixin videoPreview--xl(parentClass, imgPath, title, fullRating)
                 +videoInfoItem--content('video-preview__info-item', 'video-info-item--viewed', '55689', 'video-viewed')
                 +videoInfoItem--link('video-preview__info-item', 'video-info-item--publisher', 'Stacy Cruz', 'video-publisher')
 
-                +videoRating('video-preview__video-rating', 'video-rating--xl', fullRating)
+                +videoRating('video-preview__video-rating', 'video-rating--xl', '5.0')
                 //- End video ratign info item
             //- End info row
         //- End content beelow video
     //- End item
 
-mixin videoPreview--l(parentClass, imgPath, title, fullRating, publisher = false)
+mixin videoPreview--l(parentClass, imgPath, title, fullRating, time, publisher = false)
     article(class= parentClass + ' video-preview video-preview--size-l')
         a.video-preview__pic-block(href="/")
             .video-preview__pic-inner
-                //- Image
                 .video-preview__pic-wrapper
                     +responsiveImage('video-preview__pic', imgPath, 'jpg')
+                //- video-preview__pic-wrapper
 
                 .video-preview__video-wrapper
                     video.video-preview__video(width="100%", preload="none", playsinline="" muted="")
                         source(src="https://v.black4k.com/content/previews/72e36d7d-9a3c-436b-a40c-f7580d24b9a8/eae86a67-e136-447c-b39a-a7e26c69a2e4.mp4", type="video/mp4")
-                //- End video
-            //- End inner
+                //- video-preview__video-wrapper
+
+                if time
+                    .square-pallet.square-pallet--type_time.video-preview__time
+                        +icon('video-duration')
+                        p 38:11
+                    //- video-preview__time
+            //- video-preview__pic-inner
+
         //- End picture wrapper
         .video-preview__text-content
             a.video-preview__name(href="/", title="link title")= title
@@ -49,7 +57,7 @@ mixin videoPreview--l(parentClass, imgPath, title, fullRating, publisher = false
                 else
                     +videoInfoItem--link('video-preview__info-item video-preview__info-item--channel video-info-item--channel', 'video-info-item--text-only', 'Hunt4K', '')
 
-                +videoRating('video-preview__video-rating', 'video-rating--l', fullRating)
+                +videoRating('video-preview__video-rating', 'video-rating--l', '5.0')
             //- End info row
         //- End content beelow video
     //- End item

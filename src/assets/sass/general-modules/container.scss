@@ -3,17 +3,17 @@
 }
 // End inner
 
-.container--page {
-    &_video {
-        .container {
-            &__inner {
-                padding-inline: 1rem;
-            }
-        }
-    }
-    // End VIDEO
-}
-// End by PAGE
+// .container--page {
+//     &_video {
+//         .container {
+//             &__inner {
+//                 padding-inline: 1rem;
+//             }
+//         }
+//     }
+//     // End VIDEO
+// }
+// // End by PAGE
 
 @include media-M {
     .container {

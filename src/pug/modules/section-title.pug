@@ -13,3 +13,6 @@ mixin sectionTitle--with-subtitle(parentClass, title, subtitle)
         h2.section-title__title= title
         h3.section-title__subtitle= subtitle
     //- End title block
+
+mixin section-title(title, titleClass)
+    h2.section-title(class=titleClass)= title

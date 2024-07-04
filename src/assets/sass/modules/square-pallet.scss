@@ -1,55 +1,60 @@
 .square-pallet {
-    background: #131617;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: .3rem;
 }
 
-// MODS
-.square-pallet--type_time {
-    font-size: 1.1rem;
-    line-height: 1;
-    color: #F6F0E7;
-    padding: .3rem;
-    border-radius: 1px;
-}
-
-
-// By size
-.square-pallet--size_xl {
-    width: 6.4rem;
-    height: 4.4rem;
-    
-    svg {
+.square-pallet--type {
+    &_4k {
+        border-radius: .06rem;
+        box-shadow: 0px 0.693px 1.387px 0px rgba(0, 0, 0, 0.20);
+        background: var(--color__accent);
         width: 4.4rem;
-        height: 100%;
-    }
-}
-
-// END MODS
-
-@include media-1580 {
-    .square-pallet--size_xl {
-        width: 5rem;
-        height: 3.5rem;
-
+        height: 3rem;
+        
         svg {
-            width: 3.5rem;
-            height: 2.1rem;
+            width: 3rem;
+            height: 1.6rem;
         }
-        // End inner
     }
-}
 
-@include media-959 {
-    .square-pallet--size_xl {
-        width: 4rem;
-        height: 2.8rem;
+    &_time {
+        flex-direction: row;
+        border-radius: 0.3rem;
+        border: .1rem solid rgba(0, 0, 0, 0.06);
+        background: var(--color__odd-bg);
+        gap: .5rem;
+        color: var(--color__heading-text);
+        font-size: 1.3rem;
+        padding: .3rem .5rem;
 
         svg {
-            width: 2.8rem;
-            height: 1.7rem;
+            @include square(1.4rem);
+        }
+
+        p {
+            font-weight: 600;
+            text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
         }
     }
 }
+// End by TYPE
+
+@include media-XL {
+    .square-pallet--type {
+        &_4k {
+            width: 6.4rem;
+            height: 4.3rem;
+            border-radius: 0.1rem;
+            border:.1rem solid rgba(255, 255, 255, 0.30);
+            box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.20);
+
+            svg {
+                width: 4.4rem;
+                height: 2.3rem;
+            }
+        }
+    }
+    // End by TYPE
+}
+// End XL

@@ -1,78 +1,56 @@
 .video-rating {
     display: flex;
+    gap: 1rem;
     align-items: center;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 5rem;
+    justify-content: center;
 
     &__star {
-        display: flex;
-        
+        width: 1.5rem;
+        height: 1.4rem;
+
         svg {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+            @include square(100%);
         }
     }
-}
 
-.video-rating--xl {
-    padding: 1rem 2rem;
-    grid-gap: 1.5rem;
-
-    .video-rating {
-        &__star {
-            width: 1.6rem;
-            height: 1.5rem;
-        }
+    &__value {
+        font-family: var(--font-odd);
+        color: var(--color__heading-text);
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.2;
+        margin: 0;
     }
-    // End inner
 }
+// End inner
 
 .video-rating--l {
-    padding: .5rem .9rem;
-    grid-gap: .9rem;
+    gap: .5rem;
 
     .video-rating {
         &__star {
-            width: 0.9rem;
-            height: 0.9rem;
+            width: 1.15rem;
+            height: 1.1rem;
+        }
+
+        &__value {
+            font-size: 1.3rem;
+            font-weight: 600;
         }
     }
-    // End inner
 }
+// End by size
 
-@include media-1580 {
-    .video-rating--xl {
-        padding: .8rem 1rem .9rem;
-        grid-gap: .8rem;
-
-        .video-rating {
-            &__star {
-                width: 1.1rem;
-                height: 1rem;
-            }
+@include media-XL {
+    .video-rating {
+        &__star {
+            width: 2.1rem;
+            height: 2rem;
         }
-        // End inner
-    }
-}
 
-@include media-959 {
-    .video-rating--xl {
-        padding: .6rem 1rem;
-        grid-gap: .6rem;
-
-        .video-rating {
-            &__star {
-                width: .9rem;
-                height: .8rem;
-            }
+        &__value {
+            font-size: 2.1rem;
         }
-        // End inner
     }
 }
-
-@include media-639 {
-    .video-rating--xl, .video-rating--l {
-        grid-gap: .4rem;
-    }
-}
+// End XL

@@ -1,17 +1,18 @@
-- var previewItems = [{img: 1, icon: '4k', title: 'My Wife Likes It Rough', ratingIsFull: true}, {img: 2, icon: '4k', title: 'Swinging Misery Comrades', ratingIsFull: false},{img: 3, icon: '4k', title: `Stacy's Sexual Educationh`, ratingIsFull: false},{img: 4, icon: '4k', title: 'Hear Me While My Avatar is Making You Moan', ratingIsFull: true}]
+- var previewItems = [{img: 1, icon: '4k', title: 'Ass for money is a good deal'}, {img: 2, icon: '4k', title: 'Run After Two Whores, Will Fuck Neither'},{img: 3, icon: '4k', title: `Cucumber for Her Eyes and Boyfriend's Cock for`},{img: 4, icon: '4k', title: 'Ass for money is a good deal'}]
 
-.videos-preview.section.section--light
-    .videos-preview__grid.grid.grid-xxl--2-cols.grid-gap--xxl-30-20.grid-gap--xl-20.grid-gap--l-10.grid-gap--m-10.grid-s--1-cols.grid-gap--s-20
-        - var videoPreview__imgType = 'jpg'
-        - var videoPreview__parentClass = 'video-preview__pic'
-        - var videoPreviewSize = 'xl'
-        - var squarePalletSize = 'xl'
-        - var squarePalletParentClass = 'video-preview__square-pallet'
+.videos-preview
+    .container__inner
+        .videos-preview__grid.grid.grid--gap-S_10.grid--col-M_2.grid--gap-M_10-17.grid--gap-L_10
+            - var videoPreview__imgType = 'jpg'
+            - var videoPreview__parentClass = 'video-preview__pic'
+            - var videoPreviewSize = 'xl'
+            - var squarePalletSize = 'xl'
+            - var squarePalletParentClass = 'video-preview__square-pallet'
 
-        each previewItem in previewItems
-            +videoPreview--xl('video-preview__item', '/assets/pics/videos-preview/' + previewItem.img, previewItem.title, previewItem.ratingIsFull)
-            //- End item
-        //- End loop
-    //- End grid
-    .videos-preview__btn-wrapper
-        a.videos-preview__btn.btn.btn--size-df.btn--theme-accent(href="/") Join Now
+            each previewItem in previewItems
+                +videoPreview--xl('videos-preview__item', '/assets/pics/videos-preview/' + previewItem.img, previewItem.title, previewItem.ratingIsFull)
+                //- End item
+            //- End loop
+        //- End grid
+        .videos-preview__btn-wrapper
+            a.videos-preview__btn.btn.btn--theme_accent(href="/") Join Now

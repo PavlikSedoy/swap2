@@ -3,101 +3,73 @@
 }
 
 // XXL
-.grid-xxl--2-cols {
-    grid-template-columns: repeat(2, 1fr);
-}
 
-.grid-xxl--4-cols {
-    grid-template-columns: repeat(4, 1fr);
-}
+// .grid--col-S {
 
-.grid-xxl--6-cols {
-    grid-template-columns: repeat(6, 1fr);
-}
-// END XXL
+// }
+// // End by COL
 
-// GAP`s
-.grid-gap--xxl-10 {
-    gap: 1rem;
-}
-
-.grid-gap--xxl-15 {
-    gap: 1.5rem;
-}
-
-.grid-gap--xxl-20 {
-    gap: 2rem;
-}
-
-.grid-gap--xxl-30-20 {
-    gap: 3rem 2rem;
-}
-
-.grid-gap--xxl-40 {
-    gap: 4rem;
-}
-// END GAP`s
-
-@include media-1580 {
-    .grid-gap--xl-10 {
-        gap: 1rem;
-    }
-
-    .grid-gap--xl-20 {
-        gap: 2rem;
-    }
-
-    .grid-gap--xl-18 {
-        gap: 1.8rem;
-    }
-
-    .grid-xl--3-cols {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@include media-1399 {
-    .grid--l-3-cols {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .grid-gap--l-16 {
-        gap: 1.6rem;
-    }
-
-    .grid-gap--l-10 {
+.grid--gap-S {
+    &_10 {
         gap: 1rem;
     }
 }
+// End by GAP
 
-@include media-959 {
-    .grid--m-2-cols {
-        grid-template-columns: repeat(2, 1fr);
+@include media-M {
+    .grid--col-M {
+        &_2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
+    // End by COL
+    
+    .grid--gap-M {
+        &_10-17 {
+            gap: 1.7rem 1rem;
+        }
 
-    .grid-gap--m-10 {
-        grid-gap: 1rem;
+        &_10-11 {
+            gap: 1.1rem 1rem;
+        }
     }
+    // End by GAP
 }
+// End M
 
-@include media-639 {
-    .grid-s--1-cols {
-        grid-template-columns: 1fr;
+@include media-L {
+    .grid--col-L {
+        &_3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
-
-    .grid-gap--s-15 {
-        grid-gap: 1.5rem;
+    // End by COL
+    
+    .grid--gap-L {
+        &_10 {
+            gap: 1rem;
+        }
     }
-
-    .grid-gap--s-20 {
-        grid-gap: 2rem;
-    }
-
-    .grid-gap--s-10 {
-        grid-gap: 1rem;
-    }
-
-    .grid-gap--s-5 {
-        grid-gap: .5rem;
-    }
+    // End by GAP
 }
+// End L
+
+@include media-XL {
+    .grid--col-XL {
+        &_4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    // End by COL
+}
+// End XL
+
+@include media-XXL {
+    .grid--gap-XXL {
+        &_20-21 {
+            gap: 2.08rem 2rem;
+        }
+    }
+    // End by GAP
+}
+// End XXL

@@ -1,128 +1,129 @@
 .best-scenes {
-    display: flex;
-    flex-direction: column;
-    padding: 7rem 0 10rem;
+    padding: 3rem 0 7rem;
 
-    // Content
-    &__list {
-        margin-top: 2rem;
+    &__title {
+        margin-bottom: 2rem;
+        margin-left: 2.9rem;
     }
 
     &__btn {
-        margin: 4rem auto 0;
-        align-self: center;
-        padding: 2rem 5rem;
-        font-size: 2.4rem;
+        margin: 2rem 1rem 0;
+        padding: 1rem 0;
+        font-size: 1.8rem;
+        line-height: 1.5;
+        font-weight: 500;
+    }
+
+
+    &__item {
+        display: none;
+
+        &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+            display: block;
+        }
     }
 }
+// End inner
 
-.best-scenes--vid-pop {
-    padding: 4rem 0;
+.best-scenes--type {
+    &_vid-pop {
+        padding-block: 5rem 1rem;
 
-    .best-scenes {
-        &__list {
-            margin-top: 1.5rem;
-        }
-    }
-    // End inner
-}
-
-.best-scenes--best-scenes {
-    padding: 4rem 0 10rem;
-
-    .best-scenes {
-        &__list {
-            margin-top: 1.5rem;
-        }
-
-        &__btn {
-            padding: 2rem 7rem;
-            font-size: 1.8rem;
-        }
-    }
-    // End inner
-}
-
-@include media-1580 {
-    .best-scenes {
-        padding: 4rem 0 9rem;
-
-        &__list {
-            margin-top: 1.5rem;
-        }
-
-        &__item:nth-child(7), &__item:nth-child(8) {
-            display: none;
-        }
-    }
-
-    .best-scenes--vid-pop {
-        padding: 4rem 0;
-    }
-
-    .best-scenes--best-scenes {
         .best-scenes {
-            &__btn {
-                font-size: 2.4rem;
-                padding: 2rem 5rem;
+            &__title {
+                margin-left: 5.1rem;
             }
         }
     }
 }
+// End by TYPE
 
-@include media-959 {
+@include media-M {
     .best-scenes {
-        padding-bottom: 8rem;
-
-        &__item:nth-child(5), &__item:nth-child(6) {
-            display: none;
-        }
-
-        &__btn {
-            margin-top: 3rem;
-        }
-    }
-
-    .best-scenes--vid-pop {
-        padding-bottom: 4rem;
-    }
-
-    .best-scenes--best-scenes {
-        .best-scenes {
-            &__btn {
-                margin-top: 4rem;
-            }
-        }
-        // End inner
-    }
-}
-
-@include media-639 {
-    .best-scenes {
-        padding: 3rem 0 5rem;
-
+        padding: 4rem 0 8rem;
+    
         &__title {
-            text-align: center;
+            margin-left: 0;
+        }
+    
+        &__btn {
+            width: max-content;
+            margin: 2rem auto 0;
+            padding: 1rem 8rem;
         }
 
         &__item:nth-child(4) {
-            display: none;
-        }
-
-        &__btn {
-            font-size: 1.6rem;
-            padding: 1.3rem 6.6rem 1.4rem;
+            display: block;
         }
     }
-
-    .best-scenes--best-scenes {
-        .best-scenes {
-            &__btn {
-                margin-top: 3rem;
-                font-size: 1.6rem;
-                padding: 1.3rem 6.6rem 1.4rem;
+    // End inner
+    
+    .best-scenes--type {
+        &_vid-pop {
+            padding-block: 4rem 2rem;
+    
+            .best-scenes {
+                &__title {
+                    margin-left: 0;
+                }
             }
         }
-        // End inner
+
+        &_best-scenes {
+            padding-block: 2rem 8rem;
+        }
     }
+    // End by TYPE
 }
+// End M
+
+@include media-L {
+    .best-scenes {
+        padding: 7rem 0 10rem;
+    
+        &__btn {
+            margin: 3rem auto 0;
+            font-size: 2.4rem;
+        }
+
+        &__item:nth-child(5), &__item:nth-child(6) {
+            display: block;
+        }
+    }
+    // End inner
+    
+    .best-scenes--type {
+        &_vid-pop {
+            padding-block: 7rem 3rem;
+        }
+
+        &_best-scenes {
+            padding-block: 4rem 10rem;
+        }
+    }
+    // End by TYPE
+}
+// End L
+
+@include media-XL {
+    .best-scenes {
+        padding: 7rem 0 11.5rem;
+
+        &__item {
+            display: block;
+        }
+    }
+    // End inner
+
+    .best-scenes--type {
+        &_vid-pop {
+            padding-block: 7rem 3rem;
+        }
+
+        &_best-scenes {
+            padding-block: 4rem 11.5rem;
+        }
+    }
+    // End by TYPE
+}
+// End XL
