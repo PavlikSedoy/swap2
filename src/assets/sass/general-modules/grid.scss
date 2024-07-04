@@ -4,10 +4,12 @@
 
 // XXL
 
-// .grid--col-S {
-
-// }
-// // End by COL
+.grid--col-S {
+    &_2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+// End by COL
 
 .grid--gap-S {
     &_10 {

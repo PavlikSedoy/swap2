@@ -1,55 +1,250 @@
 .features {
-    padding: 4rem 0 7rem;
+    padding: 3rem .4rem;
+    background-color: var(--color__odd-bg);
 
-    &__items-wrapper {
-        margin-top: 2rem;
-        display: grid;
-        grid-template-columns: repeat(6, 16.5rem);
-        justify-content: space-between;
+    &__title {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &__wrapper {
+        border-radius: 0.2rem;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        background: rgba(217, 217, 217, 0.04);
     }
 
     &__item {
-        height: 15.5rem;
-    }
-    // End item
-}
+        position: relative;
+        height: 11.6rem;
 
-@include media-1580 {
-    .features {
-        padding: 4.5rem 0 4rem;
-
-        &__items-wrapper {
-            margin-top: 1.5rem;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 2rem;
-        }
-    }
-}
-
-@include media-959 {
-    .features {
-        &__items-wrapper {
-            grid-template-columns: repeat(2, 1fr);
+        &:first-child, &:nth-child(2) {
+            height: 11.3rem;
         }
 
+        &:nth-child(2n + 1) {
+            padding-right: 1rem;
+
+            &::after {
+                @include pseudo;
+                @include push--middle;
+                right: 0;
+                width: 0.1rem;
+                background-color: rgba($color: #FFF, $alpha: .06);
+                height: 9rem;
+            }
+        }
+
+        &:nth-child(2n) {
+            padding-left: 1rem;
+        }
+
+        &:nth-last-child(-n+4) {
+            &::before {
+                @include pseudo;
+                left: 0;
+                top: 0;
+                width: calc(100% - 1rem);
+                height: 0.1rem;
+                background-color: rgba($color: #FFF, $alpha: .06);
+            }
+
+            &:nth-child(2n) {
+                &::before {
+                    left: auto;
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    &__items-wrapper {
+        padding: 0 .6rem 1rem;
+    }
+}
+// End inner
+
+@include media-M {
+    .features {
+        padding: 4rem 0;
+
+        &__title {
+            text-align: start;
+        }
+    
+        &__wrapper {
+            padding: 0 1rem 1rem .9rem; 
+        }
+    
         &__item {
-            height: 11.5rem;
+            height: 14rem;
+
+            &:first-child, &:nth-child(2) {
+                height: 13rem;
+            }
+    
+            &:nth-child(2n + 1) {
+                &::after {
+                    height: 10rem;
+                }
+            }
+    
+            &:nth-child(2n) {
+                padding-left: 2.3rem;
+            }
+    
+            &:nth-last-child(-n+4) {
+                &:nth-child(2n) {
+                    &::before {
+                        left: auto;
+                        right: 0;
+                    }
+                }
+            }
         }
-    }
-}
-
-@include media-639 {
-    .features {
-        padding: 3rem 1rem;
-
+    
         &__items-wrapper {
-            margin-top: 1rem;
-            grid-template-columns: 1fr;
-            grid-gap: 1rem;
-        }
-
-        &__item {
-            height: 9.5rem;
+            padding: 0;
         }
     }
+    // End inner
 }
+// End M
+
+@include media-L {
+    .features {
+        padding: 7rem 0;
+    
+        &__wrapper {
+            padding: 0 1rem 1rem; 
+        }
+    
+        &__item {
+            height: 19.2rem;
+
+            &:first-child, &:nth-child(2) {
+                height: 19.2rem;
+            }
+
+            &:nth-child(3n) {
+                &::after {
+                    display: none;
+                }
+            }
+    
+            &:nth-child(3n + 1), &:nth-child(3n + 2) {
+                &::after {
+                    @include pseudo;
+                    @include push--middle;
+                    right: 0;
+                    width: 0.1rem;
+                    background-color: rgba($color: #FFF, $alpha: .06);
+                    height: 16.1rem;
+                }
+            }
+    
+            &:nth-child(2n), &:nth-child(2n + 1) {
+                padding: 0;
+            }
+
+            &:nth-child(3){
+                &::before {
+                    display: none;
+                }
+            }
+    
+            &:nth-last-child(-n+3) {
+                &::before {
+                    @include pseudo;
+                    left: 1rem;
+                    top: 0;
+                    width: calc(100% - 2rem);
+                    height: 0.1rem;
+                    background-color: rgba($color: #FFF, $alpha: .06);
+                }
+    
+                &:nth-child(2n) {
+                    &::before {
+                        left: auto;
+                        right: 1rem;
+                    }
+                }
+            }
+        }
+    
+        &__items-wrapper {
+            padding: 0 0 1rem;
+        }
+    }
+    // End inner
+}
+// End L
+
+@include media-XL {
+    .features {
+        padding: 7rem 0 14.9rem;
+
+        &__title {
+            margin-bottom: 3rem;
+        }
+    
+        &__wrapper {
+            padding: 0 .3rem .3rem .7rem; 
+        }
+    
+        &__item {
+            height: 22.4rem;
+
+            &:first-child, &:nth-child(2) {
+                height: 22.4rem;
+            }
+    
+            &:nth-child(3n + 1), &:nth-child(3n + 2) {
+                &::after {
+                    height: 20.5rem;
+                }
+            }
+        }
+    
+        &__items-wrapper {
+            padding: 0 0 .3rem;
+        }
+    }
+    // End inner
+}
+// End XL
+
+@include media-XXL {
+    .features {
+        padding: 7.3rem 3rem 10.5rem;
+    
+        &__wrapper {
+            padding: 0 .5rem .3rem .5rem; 
+        }
+    
+        &__item {
+            &:nth-last-child(-n+3) {
+                &::before {
+                    @include pseudo;
+                    left: 1rem;
+                    top: 0;
+                    width: calc(100% - 2rem);
+                    height: 0.1rem;
+                    background-color: rgba($color: #FFF, $alpha: .06);
+                }
+    
+                &:nth-child(2n) {
+                    &::before {
+                        left: auto;
+                        right: 1rem;
+                    }
+                }
+            }
+        }
+    
+        &__items-wrapper {
+            padding: 0 0 .1rem;
+        }
+    }
+    // End inner
+}
+// End XXL

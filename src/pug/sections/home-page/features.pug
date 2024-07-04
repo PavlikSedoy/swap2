@@ -1,11 +1,15 @@
 section.features
-    +sectionTitle--def('features__title', 'Features')
+    .container__inner
+        +section-title('Features', 'section-title--color_accent section-title--size_M features__title')
 
-    .features__items-wrapper
-        - var features = [{spriteName: '4k-display', title: 'Ultra high<br> definition'}, {spriteName: 'hd-definition', title: 'High<br> definition'}, {spriteName: 'responsive-for-devices', title: 'Mobile & tablet<br> support'}, {spriteName: '50-mp-photos', title: 'Up to 50 megapixels<br> photo'}, {spriteName: 'fast-runtime', title: 'Fast, no waiting time'}, {spriteName: 'support', title: 'Support<br> 7 days/week'}]
+        .features__wrapper
+            .features__items-wrapper.grid.grid--col-S_2.grid--col-L_3
+                - var features = [{spriteName: '4k-display', title: 'Ultra high<br> definition'}, {spriteName: 'hd-definition', title: 'High<br> definition'}, {spriteName: 'responsive-for-devices', title: 'Mobile & tablet<br> support'}, {spriteName: '50-mp-photos', title: 'Up to 50 megapixels photo'}, {spriteName: 'fast-runtime', title: 'Fast, no waiting time'}, {spriteName: 'support', title: 'Support<br> 7 days/week'}]
 
-        each feature in features
-            +iconTitleItem--features('features__item', feature.spriteName, feature.title)
-            //- End feature item
-        //- End loop
-    //- End items wrapper
+                each feature in features
+                    +iconTitleItem--features('features__item', feature.spriteName, feature.title)
+                    //- End feature item
+                //- End loop
+            //- End items wrapper
+            
+            include ./get-access

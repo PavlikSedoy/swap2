@@ -2,13 +2,14 @@
 //- - var list = ['2257 Documents', 'Privacy policy', 'Terms and Conditions', 'DMCA', 'Content removal']
 //- - var listParentClass = 'footer__list-item'
 
-//- div(class= listParentClass + ' list')
-//-     h5.list__title= listTitle
-//-     ul.list__ul
-//-         each item in list
-//-             li.list__item
-//-                 a.list__link(href="/")= item
-//-             //- End item
-//-         //- End loop
-//-     //- End ul
-//- //- End list
+mixin list(listParentClass, listTitle, list)
+    .list(class=listParentClass)
+        h5.list__title= listTitle
+        ul.list__ul
+            each item in list
+                li.list__item
+                    a.list__link(href="/")= item
+                //- End item
+            //- End loop
+        //- End ul
+    //- End list

@@ -1,227 +1,228 @@
-
 .icon-title-item {
     display: flex;
+    align-items: center;
     flex-direction: column;
+
+    &__icon {
+        flex-shrink: 0;
+    }
 
     &__title {
-        font-weight: 700;
+        font-weight: 400;
         font-size: 1.5rem;
-        line-height: 133%;
-        text-transform: capitalize;
-
-        color: #FFFFFF;
+        line-height: 1.5;
+        text-align: center;
+        color: var(--color__heading-text);
     }
 }
+// End inner
 
-.icon-title-item--features {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.056) 0%, rgba(255, 255, 255, 0.035) 98.41%);
-    border: .1rem solid rgba(255, 255, 255, 0.04);
-    border-radius: 1rem;
-    justify-content: space-between;
-    padding: 1.4rem 1.5rem 1.8rem;
-
-    .icon-title-item {
-        // Icon
-        &__icon {
-            &--4k-display {
-                width: 4.4rem;
-                height: 2.5rem;
-            }
-
-            &--hd-definition {
-                width: 4.7rem;
-                height: 2.5rem;
-            }
-
-            &--responsive-for-devices {
-                width: 2.4rem;
-                height: 3.4rem;
-            }
-
-            &--50-mp-photos {
-                width: 4.4rem;
-                height: 3.6rem;
-            }
-
-            &--fast-runtime {
-                width: 2.6rem;
-                height: 3.6rem;
-            }
-
-            &--support {
-                width: 3.6rem;
-                height: 3.6rem;
-            }
-        }
-        // End icon
-    }
-    // End inner
-}
-// End features item
-
-.icon-title-item--get-access {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    grid-gap: 1rem;
-
-    .icon-title-item {
-        &__icon-wr {
-            height: 3.8rem;
-            display: flex;
-            align-items: center;
-        }
-
-        &__icon {
-            &--14-series {
-                width: 4rem;
-                height: 3.3rem;
-            }
-
-            &--unlim-downloads {
-                width: 3.8rem;
-                height: 3.8rem;
-            }
-
-            &--early-access {
-                width: 3.4rem;
-                height: 3.5rem;
-            }
-
-            &--premium-membership {
-                width: 3.8rem;
-                height: 3.8rem;
-            }
-
-            &--special-offer {
-                width: 3.3rem;
-                height: 3.1rem;
-            }
-        }
-        // End icon
-
-        &__title {
-            font-weight: 700;
-            font-size: 1.5rem;
-            line-height: 133%;
-            text-align: center;
-            text-transform: capitalize;
-
-            color: #FFFFFF;
-        }
-    }
-    // End inner
-}
-// End Get access item
-
-@include media-1580 {
-    .icon-title-item--features {
-        padding: 1.4rem 10.5rem 1.8rem 1.5rem;
-    }
-}
-
-@include media-959 {
-    .icon-title-item--features {
-        padding: 1.4rem 1.5rem 1.7rem;
+.icon-title-item--type {
+    &_features {
+        gap: .5rem;
+        justify-content: center;
 
         .icon-title-item {
-            &__title {
-                br {
-                    display: none;
-                }
-            }
-        }
-        // End inner
-    }
-}
 
-@include media-639 {
-    .icon-title-item--features {
-        padding: 1.4rem 2.3rem 1.6rem 1.5rem;
+            // &__icon-wr {
+            //     height: 3.68rem;
+            // }
 
-        .icon-title-item {
+            // Icon
             &__icon {
-                margin-left: auto;
-
+                fill: var(--color__accent);
                 &--4k-display {
-                    width: 3.6rem;
-                    height: 2rem;
+                    width: 4.5rem;
+                    height: 2.4rem;
                 }
     
                 &--hd-definition {
-                    width: 3.8rem;
-                    height: 2rem;
+                    width: 4.6rem;
+                    height: 2.4rem;
                 }
     
                 &--responsive-for-devices {
-                    width: 2.1rem;
-                    height: 2.9rem;
+                    width: 3.28rem;
+                    height: 3.28rem;
                 }
     
                 &--50-mp-photos {
-                    width: 3.8rem;
-                    height: 3.1rem;
+                    width: 4.2rem;
+                    height: 3.68rem;
                 }
     
                 &--fast-runtime {
-                    width: 2.2rem;
-                    height: 3.1rem;
+                    width: 3.3rem;
+                    height: 2.4rem;
                 }
     
                 &--support {
-                    width: 3.1rem;
-                    height: 3.1rem;
-                }
-            }
-        }
-        // End inner
-    }
-
-    .icon-title-item--get-access {
-        flex-direction: row-reverse;
-        justify-content: space-between;
-
-        .icon-title-item {
-            &__title {
-                br.hide-mobile {
-                    display: none;
-                }
-
-                text-align: left;
-            }
-
-            &__icon-wr {
-                height: auto;
-            }
-
-            &__icon {
-                &--14-series {
-                    width: 3rem;
-                    height: 2.5rem;
-                }
-    
-                &--unlim-downloads {
-                    width: 2.9rem;
-                    height: 2.9rem;
-                }
-    
-                &--early-access {
-                    width: 2.5rem;
-                    height: 2.6rem;
-                }
-    
-                &--premium-membership {
-                    width: 2.4rem;
-                    height: 2.3rem;
-                }
-    
-                &--special-offer {
-                    width: 2.9rem;
-                    height: 2.9rem;
+                    width: 2.96rem;
+                    height: 2.96rem;
                 }
             }
             // End icon
         }
         // End inner
     }
+    // End FEATURES
+
+    &_get-access {
+        flex-direction: row;
+        gap: 1.5rem;
+    
+        .icon-title-item {
+            &__icon-wr {
+                width: 2.55rem;
+            }
+
+            &__icon {
+                &--19-series {
+                    width: 2.26rem;
+                    height: 1.6rem;
+                }
+    
+                &--unlim-downloads {
+                    width: 2.3rem;
+                    height: 2.2rem;
+                }
+    
+                &--early-access {
+                    width: 2.2rem;
+                    height: 2.2rem;
+                }
+    
+                &--premium-membership {
+                    @include square(2.4rem);
+                }
+    
+                &--special-offer {
+                    width: 2.55rem;
+                    height: 2.4rem;
+                }
+            }
+            // End icon
+    
+            &__title {
+                font-size: 1.4rem;
+                text-align: left;
+                text-transform: capitalize;
+
+                span {
+                    display: none;
+                }
+            }
+        }
+        // End inner
+    }
+    // End ACCESS
 }
+// End by TYPE
+
+@include media-M {
+    .icon-title-item {
+        &__title {
+            font-size: 1.6rem;
+        }
+    }
+    // End inner
+
+    .icon-title-item--type {
+        &_features {
+            // gap: 2rem;
+            gap: 1.5rem;
+
+            .icon-title-item {
+                &__title {
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &_get-access {
+            .icon-title-item {
+                &__title {
+                    font-size: 1.6rem;
+                    span {
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+    // End by TYPE
+}
+// End M
+
+@include media-L {
+    .icon-title-item--type {
+        &_features {
+            .icon-title-item {
+                // Icon
+                &__icon {
+
+                    &--4k-display {
+                        width: 5.6rem;
+                        height: 3rem;
+                    }
+        
+                    &--hd-definition {
+                        width: 5.8rem;
+                        height: 3rem;
+                    }
+        
+                    &--responsive-for-devices {
+                        width: 5.2456rem;
+                        height: 4.6rem;
+                    }
+        
+                    &--50-mp-photos {
+                        width: 5.3rem;
+                        height: 4.6rem;
+                    }
+        
+                    &--fast-runtime {
+                        width: 4.1rem;
+                        height: 3rem;
+                    }
+        
+                    &--support {
+                        width: 3.7rem;
+                        height: 3.7rem;
+                    }
+                }
+                // End icon
+
+                &__title {
+                    font-size: 1.8rem;
+                }
+            }
+            // End inner
+        }
+        // End FEATURES
+
+
+    }
+    // End by TYPE
+}
+// End L
+
+@include media-XL {
+    .icon-title-item--type {
+        &_features {
+            gap: 3.5rem;
+        }
+    }
+}
+// End XL
+
+@include media-XXL {
+    .icon-title-item--type {
+        &_features {
+            gap: 3rem;
+        }
+    }
+}
+// End XXL
