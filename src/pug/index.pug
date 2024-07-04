@@ -4,14 +4,13 @@ block variables
 	- var title = 'Welcome to Swap4k!'
 
 block content
-	.container
+	.container.container--page_home
 		include ./general-sections/header
 		include ./general-modules/mobile-nav
 		main
 			include ./sections/home-page/main-screen
-			.container--inner
-				include ./sections/home-page/page-description
-				include ./sections/home-page/videos-preview
+			include ./sections/home-page/page-description
+			include ./sections/home-page/videos-preview
 			.line-hr-dashed
 			.container--inner
 				include ./sections/home-page/features

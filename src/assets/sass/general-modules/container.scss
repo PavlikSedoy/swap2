@@ -1,6 +1,19 @@
 .container {
     width: 100%;
 }
+// End inner
+
+.container--page {
+    &_video {
+        .container {
+            &__inner {
+                padding-inline: 1rem;
+            }
+        }
+    }
+    // End VIDEO
+}
+// End by PAGE
 
 @include media-M {
     .container {
@@ -8,6 +21,27 @@
         margin-inline: auto;
     }
     // End inner
+
+    .container--page {
+        &_video {
+            .container {
+                &__inner {
+                    padding-inline: 1.1rem;
+                }
+            }
+        }
+        // End VIDEO
+
+        &_home {
+            .container {
+                &__inner {
+                    padding-inline: 1rem;
+                }
+            }
+        }
+        // End home
+    }
+    // End by PAGE
 }
 // End M
 
@@ -26,5 +60,32 @@
         margin-inline: auto;
     }
     // End inner
+
+    .container--page {
+        &_video {
+            .container {
+                &__inner {
+                    padding-inline: 2rem;
+                }
+            }
+        }
+        // End VIDEO
+    }
+    // End by PAGE
 }
 // End M
+
+@include media-XXL {
+    .container--page {
+        &_video {
+            .container {
+                &__inner {
+                    padding-inline: 4rem;
+                }
+            }
+        }
+        // End VIDEO
+    }
+    // End by PAGE
+}
+// End XXL
