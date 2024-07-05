@@ -107,7 +107,7 @@
 
 @include media-XL {
     .best-scenes {
-        padding: 7rem 0 11.5rem;
+        padding: 7rem 1rem 11.5rem;
 
         &__item {
             display: block;
@@ -117,7 +117,7 @@
 
     .best-scenes--type {
         &_vid-pop {
-            padding-block: 7rem 3.2rem;
+            padding: 7rem 0 3.2rem;
 
             .best-scenes {
                 &__title {
@@ -127,7 +127,7 @@
         }
 
         &_best-scenes {
-            padding-block: 4rem 11.5rem;
+            padding: 4rem 0 11.5rem;
         }
     }
     // End by TYPE
@@ -135,15 +135,23 @@
 // End XL
 
 @include media-XXL {
+    .best-scenes {
+        padding: 7rem 3rem 11.5rem;
+    }
+
     .best-scenes--type {
         &_vid-pop {
-            padding-block: 7rem 3.1rem;
+            padding: 7rem 0 3.1rem;
             
             .best-scenes {
                 &__title {
                     margin-bottom: 2rem;
                 }
             }
+        }
+
+        &_best-scenes {
+            padding: 4rem 0 11.5rem;
         }
     }
 }

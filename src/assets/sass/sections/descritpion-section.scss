@@ -1,12 +1,12 @@
 .description-section {
-    padding-block: 1rem;
+    padding-block: 1rem .9rem;
 
     &__title {
         text-align: center;
         color: #F7B500;
         font-size: 2.1rem;
         font-weight: 700;
-        line-height: 1.2;
+        line-height: 1.19;
     }
 
     &__desc {
@@ -26,12 +26,13 @@
         &__content {
             border-radius: 0.2rem;
             background: #000;
-            padding: 1.5rem 1rem 3rem;
+            padding: 1.6rem 1rem 3rem;
         }
     
         &__title {
             font-size: 3.2rem;
             margin-bottom: 1rem;
+            line-height: 1.21;
         }
     
         &__desc {
@@ -40,7 +41,7 @@
             text-align: center;
             font-size: 1.3rem;
             font-weight: 400;
-            line-height: 150%;
+            line-height: 154%;
 
             p {
                 margin-bottom: 0;
@@ -63,7 +64,7 @@
             line-height: 150%; 
             width: max-content;
             margin: 2rem auto 0;
-            padding: .8rem 1.2rem .8rem 5.9rem;
+            padding: .8rem 1.2rem .7rem 5.9rem;
 
             p {
                 margin-right: 3.2rem;
@@ -108,9 +109,13 @@
         &__content {
             padding: 3.9rem 11rem 3.8rem 10.9rem;
         }
+
+        &__desc {
+            line-height: 1.53;
+        }
     
         &__btn {
-            margin: 2.5rem auto 0;
+            margin: 2.3rem auto 0;
         }
     }
     // End inner

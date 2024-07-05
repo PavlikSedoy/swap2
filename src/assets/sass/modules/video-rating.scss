@@ -41,6 +41,15 @@
 }
 // End by size
 
+@include media-L {
+    .video-rating {
+        &__value {
+            font-size: 1.8rem;
+        }
+    }
+}
+// End L
+
 @include media-XL {
     .video-rating {
         &__star {

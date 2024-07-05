@@ -166,6 +166,11 @@
         line-height: 1.22;
         color: var(--color__heading-text);
         display: block;
+        transition: var(--transition);
+
+        &:hover {
+            color: var(--color__accent-hover);
+        }
     }
     // End download
 }

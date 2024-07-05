@@ -20,35 +20,32 @@
 .icon-title-item--type {
     &_features {
         gap: .5rem;
-        justify-content: center;
+        justify-content: flex-end;
+        padding-bottom: 1rem;
 
         .icon-title-item {
-
-            // &__icon-wr {
-            //     height: 3.68rem;
-            // }
 
             // Icon
             &__icon {
                 fill: var(--color__accent);
                 &--4k-display {
-                    width: 4.5rem;
-                    height: 2.4rem;
-                }
-    
-                &--hd-definition {
                     width: 4.6rem;
                     height: 2.4rem;
                 }
     
+                &--hd-definition {
+                    width: 4.7rem;
+                    height: 2.4rem;
+                }
+    
                 &--responsive-for-devices {
-                    width: 3.28rem;
-                    height: 3.28rem;
+                    width: 3.3rem;
+                    height: 3.3rem;
                 }
     
                 &--50-mp-photos {
-                    width: 4.2rem;
-                    height: 3.68rem;
+                    width: 4.5rem;
+                    height: 4rem;
                 }
     
                 &--fast-runtime {
@@ -57,8 +54,8 @@
                 }
     
                 &--support {
-                    width: 2.96rem;
-                    height: 2.96rem;
+                    width: 3rem;
+                    height: 3rem;
                 }
             }
             // End icon
@@ -78,17 +75,17 @@
 
             &__icon {
                 &--19-series {
-                    width: 2.26rem;
-                    height: 1.6rem;
+                    width: 2.4rem;
+                    height: 1.7rem;
                 }
     
                 &--unlim-downloads {
-                    width: 2.3rem;
+                    width: 2.4rem;
                     height: 2.2rem;
                 }
     
                 &--early-access {
-                    width: 2.2rem;
+                    width: 2.4rem;
                     height: 2.2rem;
                 }
     
@@ -97,7 +94,7 @@
                 }
     
                 &--special-offer {
-                    width: 2.55rem;
+                    width: 2.6rem;
                     height: 2.4rem;
                 }
             }
@@ -129,8 +126,8 @@
 
     .icon-title-item--type {
         &_features {
-            // gap: 2rem;
             gap: 1.5rem;
+            padding-bottom: 2.9rem;
 
             .icon-title-item {
                 &__title {
@@ -159,12 +156,19 @@
 @include media-L {
     .icon-title-item--type {
         &_features {
+            padding-bottom: 4.7rem;
+            gap: 2rem;
+
             .icon-title-item {
+
+                &__icon-wr {
+                    height: 5rem;
+                }
                 // Icon
                 &__icon {
 
                     &--4k-display {
-                        width: 5.6rem;
+                        width: 5.7rem;
                         height: 3rem;
                     }
         
@@ -174,13 +178,13 @@
                     }
         
                     &--responsive-for-devices {
-                        width: 5.2456rem;
-                        height: 4.6rem;
+                        width: 4.1rem;
+                        height: 4.1rem;
                     }
         
                     &--50-mp-photos {
-                        width: 5.3rem;
-                        height: 4.6rem;
+                        width: 5.6rem;
+                        height: 5rem;
                     }
         
                     &--fast-runtime {
@@ -212,7 +216,8 @@
 @include media-XL {
     .icon-title-item--type {
         &_features {
-            gap: 3.5rem;
+            gap: 2rem;
+            padding-bottom: 5.8rem;
         }
     }
 }

@@ -1,5 +1,5 @@
 .features {
-    padding: 3rem .4rem;
+    padding: 3rem .4rem 2.9rem;
     background-color: var(--color__odd-bg);
 
     &__title {
@@ -15,10 +15,10 @@
 
     &__item {
         position: relative;
-        height: 11.6rem;
+        height: 11.5rem;
 
         &:first-child, &:nth-child(2) {
-            height: 11.3rem;
+            height: 11.2rem;
         }
 
         &:nth-child(2n + 1) {
@@ -55,10 +55,14 @@
                 }
             }
         }
+
+        &:nth-child(5), &:last-child {
+            padding-bottom: 0.8rem;
+        }
     }
 
     &__items-wrapper {
-        padding: 0 .6rem 1rem;
+        padding: 0 .6rem 1.2rem;
     }
 }
 // End inner
@@ -72,7 +76,7 @@
         }
     
         &__wrapper {
-            padding: 0 1rem 1rem .9rem; 
+            padding: 0 .8rem 1rem .9rem; 
         }
     
         &__item {
@@ -83,13 +87,14 @@
             }
     
             &:nth-child(2n + 1) {
+                padding-right: .6rem;
                 &::after {
                     height: 10rem;
                 }
             }
     
             &:nth-child(2n) {
-                padding-left: 2.3rem;
+                padding-left: 2.5rem;
             }
     
             &:nth-last-child(-n+4) {
@@ -99,6 +104,10 @@
                         right: 0;
                     }
                 }
+            }
+
+            &:nth-child(5), &:last-child {
+                padding-bottom: 2.9rem;
             }
         }
     
@@ -143,7 +152,11 @@
             }
     
             &:nth-child(2n), &:nth-child(2n + 1) {
-                padding: 0;
+                padding-inline: 0;
+            }
+
+            &:nth-child(5), &:last-child {
+                padding-bottom: 4.8rem;
             }
 
             &:nth-child(3){
@@ -181,14 +194,14 @@
 
 @include media-XL {
     .features {
-        padding: 7rem 0 14.9rem;
+        padding: 7rem 0.9rem 14.9rem;
 
         &__title {
             margin-bottom: 3rem;
         }
     
         &__wrapper {
-            padding: 0 .3rem .3rem .7rem; 
+            padding: 0 .2rem .3rem .5rem; 
         }
     
         &__item {
@@ -203,10 +216,14 @@
                     height: 20.5rem;
                 }
             }
+
+            &:nth-child(5), &:last-child {
+                padding-bottom: 5.8rem;
+            }
         }
     
         &__items-wrapper {
-            padding: 0 0 .3rem;
+            padding: 0 0 .2rem;
         }
     }
     // End inner

@@ -59,6 +59,7 @@
         color: rgba(255, 255, 255, 0.80);
         font-size: 1.4rem;
         line-height: 150%;
+        transition: var(--transition);
     }
 
     &__desc {
@@ -67,6 +68,14 @@
         font-size: 1.2rem;
         line-height: 125%;
         font-family: var(--font-odd);
+    }
+
+    &:hover {
+        .logo-title-item {
+            &__title {
+                color: var(--color__accent);
+            }
+        }
     }
 }
 // End inner

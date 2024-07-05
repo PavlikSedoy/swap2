@@ -1,11 +1,11 @@
 .chapters {
-    padding: 1rem;
+    padding: 1.1rem 0 .9rem;
 
     &__list {
         display: flex;
         align-items: center;
         justify-content: center;
-        grid-gap: 6.6rem;
+        grid-gap: 6.8rem;
     }
 
     &__item:last-child .chapters__seperator {
@@ -28,12 +28,13 @@
         @include square(.6rem);
         position: absolute;
         @include push--middle;
-        right: -3.3rem;
+        right: -3.6rem;
         border-radius: 0.1rem;
         background: rgba(255, 255, 255, 0.80);
     }
 } 
 // End inner
+
 
 @include media-L {
     .chapters {
