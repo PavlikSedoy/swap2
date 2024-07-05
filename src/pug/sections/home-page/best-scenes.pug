@@ -20,7 +20,7 @@ section(class= sectionClass)
             - var bestScenes = [{img: 1, fullRating: true}, {img: 2, fullRating: false},{img: 3, fullRating: false},{img: 4, fullRating: true},{img: 5, fullRating: false}, {img: 6, fullRating: true},{img: 7, fullRating: false},{img: 8, fullRating: true}]
 
             each bestScene in bestScenes
-                +videoPreview--l('best-scenes__item', '/assets/pics/best-scenes/' + bestScene.img, 'Ass for money is a good deal', true, true, publisher)
+                +videoPreview--l('best-scenes__item', './assets/pics/best-scenes/' + bestScene.img, 'Ass for money is a good deal', true, true, publisher)
         //- End items
 
         if sectionType !== 'video-popular'
