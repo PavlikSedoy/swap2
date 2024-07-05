@@ -1,0 +1,105 @@
+.scene-preview {
+
+    &__item {
+        border-radius: .2rem;
+        position: relative;
+        overflow: hidden;
+
+        picture {
+            position: absolute;
+            @include push-full;
+        }
+
+        img {
+            @include cover-image;
+        }
+
+        &::after {
+            @include pseudo(block, relative);
+            width: 100%;
+            padding-top: 56.25%;
+        }
+        display: none;
+
+        @for $i from 1 through 4 {
+            &:nth-child(#{$i}) {
+                display: block;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 1.6rem;
+    }
+}
+// End inner
+
+@include media-M {
+    .scene-preview {
+
+        &__item {
+            &::after {
+                padding-top: 56%;
+            }
+
+            @for $i from 5 through 6 {
+                &:nth-child(#{$i}) {
+                    display: block;
+                }
+            }
+        }
+
+        &__title {
+            margin-bottom: 1.5rem;
+        }
+    }
+    // End inner
+}
+// End M
+
+@include media-L {
+    .scene-preview {
+
+        &__item {
+            &::after {
+                padding-top: 56.2%;
+            }  
+
+            @for $i from 7 through 8 {
+                &:nth-child(#{$i}) {
+                    display: block;
+                }
+            }
+        }
+    }
+    // End inner
+}
+// End L
+
+@include media-XL {
+    .scene-preview {
+    
+        &__item {
+            display: block;
+            // @for $i from 7 through 12 {
+            //     &:nth-child(#{$i}) {
+            //         display: block;
+            //     }
+            // }
+        }
+    }
+    // End inner
+}
+// End XL
+
+@include media-XXL {
+    .scene-preview {
+        &__item {
+            &::after {
+                padding-top: 56.25%;
+            }
+        }
+    }
+    // End inner
+}
+// End XXL

@@ -117,7 +117,13 @@
 
     .best-scenes--type {
         &_vid-pop {
-            padding-block: 7rem 3rem;
+            padding-block: 7rem 3.2rem;
+
+            .best-scenes {
+                &__title {
+                    margin-bottom: 2.5rem;
+                }
+            }
         }
 
         &_best-scenes {
@@ -127,3 +133,18 @@
     // End by TYPE
 }
 // End XL
+
+@include media-XXL {
+    .best-scenes--type {
+        &_vid-pop {
+            padding-block: 7rem 3.1rem;
+            
+            .best-scenes {
+                &__title {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+}
+// End XXL

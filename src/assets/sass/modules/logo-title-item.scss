@@ -1,225 +1,167 @@
 .logo-title-item {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: .8rem;
-    padding: 1rem 1rem 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
 
     &__icon-wrapper {
-        width: 6.5rem;
-        height: 6.5rem;
-        background: rgba(20, 24, 26, 0.6);
-        border-radius: .7rem;
+        position: absolute;
+        left: 0;
+        @include push--middle;
+        width: 4rem;
 
         display: flex;
         align-items: center;    
         justify-content: center;
 
         .dw4k {
-            width: 3.9rem;
-            height: 3.9rem;
-        }
-
-        .dw-hd-sm {
-            width: 5.4rem;
-            height: 4.2rem;
+            width: 2.9rem;
+            height: 1.6rem;
         }
 
         .dw-hd {
-            width: 4.3rem;
-            height: 3.9rem;
+            width: 2.9rem;
+            height: 1.5rem;
+        }
+
+        .dw-hd-sm {
+            width: 4rem;
+            height: 2.3rem;
         }
 
         .dw-sd {
-            width: 4rem;
-            height: 3.9rem;
+            width: 2.76rem;
+            height: 1.6rem;
         }
 
         .dw-mb-vid {
-            width: 2.1rem;
-            height: 3rem;
+            @include square(2.4rem);
         }
 
         .dw-img {
-            width: 3.7rem;
-            height: 3rem;
+            width: 3.5rem;
+            height: 3.2rem;
         }
 
         .dw-sub {
-            width: 3.5rem;
-            height: 3.1rem;
+            width: 3.2rem;
+            height: 2.6rem;
         }
     }
 
     &__content {
-        color: #fff;
+        padding-left: 5.5rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
     }
 
     &__title {
-        font-weight: 700;
-        font-size: 1.6rem;
-        line-height: 137.5%;
-        text-transform: capitalize;
+        color: rgba(255, 255, 255, 0.80);
+        font-size: 1.4rem;
+        line-height: 150%;
     }
 
     &__desc {
-        opacity: .6;
+        color: rgba(255, 255, 255, 0.40);
+        text-transform: uppercase;
         font-size: 1.2rem;
-        line-height: 200%;
+        line-height: 125%;
+        font-family: var(--font-odd);
     }
 }
+// End inner
 
-@include media-1580 {
+@include media-M {
     .logo-title-item {
-        padding: 1rem;
+        padding-inline: .8rem 1.1rem;
 
+        &__icon-wrapper {
+            width: 5rem;
+            left: .4rem;
+        }
+
+        &__content {
+            padding-left: 5.5rem;
+            align-items: center;
+        }
+    
         &__title {
-            font-size: 1.4rem;
-        }
-
-        &__icon-wrapper {
-            width: 5.5rem;
-            height: 5.5rem;
-
-            .dw4k {
-                width: 3.3rem;
-                height: 1.9rem;
-            }
-    
-            .dw-hd-sm {
-                width: 4.5rem;
-                height: 2.7rem;
-            }
-    
-            .dw-hd {
-                width: 3.5rem;
-                height: 1.9rem;
-            }
-    
-            .dw-sd {
-                width: 3.3rem;
-                height: 2rem;
-            }
-    
-            .dw-mb-vid {
-                width: 1.8rem;
-                height: 2.6rem;
-            }
-    
-            .dw-img {
-                width: 3.1rem;
-                height: 2.6rem;
-            }
-    
-            .dw-sub {
-                width: 3rem;
-                height: 2.6rem;
-            }
+            font-size: 1.5rem;
+            line-height: 1.53;
         }
     }
 }
+// End M
 
-@include media-959 {
+@include media-L {
     .logo-title-item {
-        padding-left: 2rem;
+        align-items: center;
+        padding: 2rem 0;
+
+        &__content {
+            flex-direction: column;
+            gap: .6rem;
+            align-items: flex-start;
+            padding-left: 6rem;
+        }
+    }
+}
+// End L
+
+@include media-XL {
+    .logo-title-item {
 
         &__icon-wrapper {
-            width: 6.5rem;
-            height: 6.5rem;
-
-            .dw4k {
-                width: 3.9rem;
-                height: 3.9rem;
-            }
+            width: 8rem;
     
-            .dw-hd-sm {
-                width: 5.4rem;
-                height: 4.2rem;
+            .dw4k {
+                width: 3.6rem;
+                height: 1.9rem;
             }
     
             .dw-hd {
-                width: 4.3rem;
-                height: 3.9rem;
+                width: 3.7rem;
+                height: 1.9rem;
+            }
+    
+            .dw-hd-sm {
+                width: 4.9rem;
+                height: 2.9rem;
             }
     
             .dw-sd {
-                width: 4rem;
-                height: 3.9rem;
+                width: 3.5rem;
+                height: 1.9rem;
             }
     
             .dw-mb-vid {
-                width: 2.1rem;
-                height: 3rem;
+                @include square(3rem);
             }
     
             .dw-img {
-                width: 3.7rem;
-                height: 3rem;
+                width: 4.4rem;
+                height: 3.9rem;
             }
     
             .dw-sub {
-                width: 3.5rem;
+                width: 3.8rem;
                 height: 3.1rem;
             }
         }
+    
 
-        &__title {
-            font-size: 1.6rem;
+        &__content {
+            padding-left: 8.5rem;
         }
     }
 }
+// End XL
 
-@include media-639 {
+@include media-XXL {
     .logo-title-item {
-        padding: 0.5rem .5rem .5rem 1rem; 
-
-        &__title {
-            font-size: 1.4rem;
-        }
-
-        &__desc {
-            line-height: 1.6rem;
-        }
-
-        &__icon-wrapper {
-            width: 4.5rem;
-            height: 4.5rem;
-
-            .dw4k {
-                width: 2.7rem;
-                height: 1.6rem;
-            }
-    
-            .dw-hd-sm {
-                width: 3.7rem;
-                height: 2.2rem;
-            }
-    
-            .dw-hd {
-                width: 2.9rem;
-                height: 1.6rem;
-            }
-    
-            .dw-sd {
-                width: 2.7rem;
-                height: 1.6rem;
-            }
-    
-            .dw-mb-vid {
-                width: 1.5rem;
-                height: 2.1rem;
-            }
-    
-            .dw-img {
-                width: 2.6rem;
-                height: 2.1rem;
-            }
-    
-            .dw-sub {
-                width: 2.4rem;
-                height: 2.1rem;
-            }
+        &__content {
+            padding-left: 9rem;
         }
     }
 }
+// End XXL

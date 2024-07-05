@@ -8,6 +8,7 @@
     text-align: center;
     font-family: var(--font-general);
     text-transform: capitalize;
+    background-color: transparent;
 
     svg {
         transition: var(--transition);
@@ -20,23 +21,6 @@
     align-items: center;
     justify-content: center;
 }
-
-// Font size
-.btn--size-df {
-    font-size: 1.6rem;
-}
-
-// // Theme
-// .btn--theme-dark {
-//     background: transparent;
-//     color: rgba(255, 255, 255, 0.5);
-//     border: 1px dashed rgba(255, 255, 255, 0.25);
-
-//     &:hover {
-//         background: rgba(#9797974B, .3);
-//         border-color: transparent;
-//     }
-// }
 
 .btn--theme {
     &_dark {

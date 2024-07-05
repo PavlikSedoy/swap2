@@ -23,17 +23,6 @@
     }
 }
 
-// // Mods
-// .video-info-item--xl {
-//     .video-info-item {
-//         &__value {
-//             margin-left: 0.6rem;
-//             font-size: 1.4rem;
-//         }
-//     }
-//     // End inner
-// }
-
 a.video-info-item:hover {
     .video-info-item {
         &__icon svg {
@@ -75,16 +64,6 @@ a.video-info-item:hover {
     }
     // End inner
 }
-
-// .video-info-item--heart {
-//     .video-info-item {
-//         &__icon svg {
-//             width: 1.8rem;
-//             height: 1.7rem;
-//         }
-//     }
-//     // End inner
-// }
 
 .video-info-item--like {
     .video-info-item {
@@ -128,6 +107,8 @@ a.video-info-item--channel {
 }
 
 .video-info-item--publisher-video {
+    gap: .3rem;
+
     .video-info-item {
         &__icon {
             width: 1rem;
@@ -162,13 +143,14 @@ a.video-info-item--channel {
             .video-info-item {
                 &__value {
                     font-size: 1.4rem;
+                    line-height: 1.21;
                 }
             }
 
             &.video-info-item--duration, &.video-info-item--viewed, &.video-info-item--publisher {
                 .video-info-item {
                     &__icon {
-                        @include square(2rem);
+                        @include square(2.1rem);
                     }
                 }
                 // End inner
@@ -177,7 +159,7 @@ a.video-info-item--channel {
             &.video-info-item--like, &.video-info-item--download {
                 .video-info-item {
                     &__icon {
-                        @include square(1.8rem);
+                        @include square(1.7rem);
                     }
                 }
                 // End inner
@@ -210,10 +192,12 @@ a.video-info-item--channel {
 
     .video-info-item--like, .video-info-item--download {
         padding: 1.3rem 2rem;
+        gap: 1.1rem;
     }
     // End LINKS
 
     .video-info-item--publisher-video {
+        gap: .5rem;
         .video-info-item {
             &__value {
                 font-size: 1.2rem;
@@ -234,4 +218,15 @@ a.video-info-item--channel {
         }
         // End inner
     }
+
+    .video-info-item--publisher-video {
+        gap: .4rem;
+        .video-info-item {
+            &__icon {
+                @include square(1rem);;
+            }
+        }
+        // End inner
+    }
+    // End BY ICONS
 }

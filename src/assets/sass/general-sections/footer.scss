@@ -12,7 +12,12 @@
     &__nav {
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 4rem;
+    }
+
+
+    &__list-item:last-child {
+        margin-top: -1rem;
     }
 }
 // End inner
@@ -35,8 +40,12 @@
     
         &__nav {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: 30rem 30rem auto;
             gap: 0;
+        }
+
+        &__list-item:last-child {
+            margin-top: 0;
         }
     }
     // End inner
@@ -64,7 +73,7 @@
 }
 // End XL
 
-@include media-XL {
+@include media-XXL {
     .footer {
         padding: 8rem 6rem 6rem;
     

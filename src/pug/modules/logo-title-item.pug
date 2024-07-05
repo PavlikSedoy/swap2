@@ -1,12 +1,12 @@
 mixin logo-title-item(parentClass, iconName, iconClass, title, desc)
-    div(class= parentClass + ' logo-title-item logo-title-item--with-desc')
+    a(href="/" class= parentClass + ' logo-title-item logo-title-item--with-desc')
+        .logo-title-item__icon-wrapper
+            if iconName !== ''
+                +icon-class(iconName, iconClass)
+        //- End icon wrapper
         .logo-title-item__content
             h4.logo-title-item__title= title
             if desc !== ''
                 .logo-title-item__desc= desc
         //- End content
-        .logo-title-item__icon-wrapper
-            if iconName !== ''
-                +icon-class(iconName, iconClass)
-        //- End icon wrapper
     //- End item

@@ -3,10 +3,4 @@ form.footer__form.footer-form(action="/", method="post")
     .footer-form__desc
         p Sign up for our newsletter and get new deals and discounts directly on your email for FREE
     //- End desc
-
-    //- - var customInput__parentClass = 'footer-form__field'
-    //- - var customInput__theme = 'dark'
-    //- - var customInput__fieldType = 'email'
-    //- - var customInput__placeholder = 'Your Email'
-    //- include ../general-modules/custom-input
-    +customInput--withBtnIn('footer-form__field', 'Your Email', 'Subscribe')
+    +customInput--withBtnIn('footer-form__field', 'Your email', 'Subscribe')

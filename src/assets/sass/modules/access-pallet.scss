@@ -1,102 +1,107 @@
 .access-pallet {
-    padding: 4.8rem 5.5rem 3.4rem;
-    
-    &__blur-bg {
-        position: absolute;
-        @include push-full;
-        border-radius: 1.3rem;
-        border: .7rem solid #EFC127;
-        overflow: hidden;
-    }
-
-    &__blur-bg-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+    padding: 1.8rem 1rem .8rem;
+    border-radius: 0.16rem;
+    border: 0.04rem solid rgba(255, 255, 255, 0.05);
+    background: rgba(22, 22, 23, 0.97);
 
     &__inner {
-        position: relative;
-        z-index: z('content');
+        text-align: center;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        position: relative;
     }
 
     &__title {
-        font-weight: 900;
-        font-size: 4.5rem;
-        line-height: 135.6%;
-        white-space: nowrap;
-        border-radius: .2rem;
-        background: #131617;
-        padding: 0 2rem;
-        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 1.2;
+        color: #F7B500;
         text-transform: uppercase;
+        white-space: nowrap;
     }
 
     &__desc {
-        margin: 0.8rem auto 0 auto;
-        max-width: 33.4rem;
-        font-size: 2.9rem;
-        line-height: 134.5%;
-        color: #FFFFFF;
-        text-transform: capitalize;
-        text-align: center;
+        margin-top: .5rem;
+        font-size: 1.2rem;
+        line-height: 150%;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.80);
     }
 
     &__btn {
-        margin: 2.5rem auto 0 auto;
-        padding: 1.2rem 4.7rem 1.3rem;
-        font-size: 1.8rem;
-        line-height: 138.9%;
+        margin-top: 1rem;
+        padding: .6rem 0rem .5rem;
+        border-radius: .3rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 1.5;
+        width: 100%;
+        text-transform: capitalize;
+
+        svg {
+            @include square(1.5rem);
+            display: none;
+        }
     }
 }
+// End inner
 
-@include media-959 {
+@include media-M {
     .access-pallet {
-        padding: 3.2rem 3.6rem 2.2rem;
-
-        &__blur-bg {
-            border-width: .4rem;
-            border-radius: .9rem;
-        }
+        border: 0.08rem solid rgba(255, 255, 255, 0.05);
+        border-radius: 0.32rem;
+        padding: 3.6rem 3.4rem 2.5rem;
 
         &__title {
-            font-size: 2.8rem;
+            font-size: 4rem;
+        }
+
+        &__desc {
+            margin-top: 1rem;
+            font-size: 1.6rem;
+        }
+
+        &__btn {
+            margin-top: 1.7rem;
+            justify-content: flex-end;
+            padding: .65rem 1.2rem .7rem 5.9rem;
+            width: auto;
+            font-size: 1.5rem;
+
+            p {
+                margin-right: 3.2rem;
+            }
+
+            svg {
+                display: block;
+            }
+        }
+    }
+    // End inner
+}
+// End M
+
+@include media-L {
+    .access-pallet {
+        padding: 4.5rem 4.5rem 4.1rem;
+        border-radius: 0.4rem;
+        border: .1rem solid rgba(255, 255, 255, 0.05);
+        background: rgba(22, 22, 23, 0.97);
+
+        &__title {
+            font-size: 5.1rem;
         }
 
         &__desc {
             font-size: 1.8rem;
         }
-
+        
         &__btn {
-            margin-top: 1.9rem;
-            font-size: 1.4rem;
-            padding: .7rem 2.5rem;
+            margin-top: 2.5rem;
         }
     }
+    // End inner
 }
-
-@include media-639 {
-    .access-pallet {
-        padding: 1.7rem 2.5rem 1.8rem;
-
-        &__title {
-            font-size: 1.8rem;
-            padding: 0 1.2rem;
-        }
-
-        &__desc {
-            margin-top: 0;
-            font-size: 1.2rem;
-            max-width: 14rem;
-        }
-
-        &__btn {
-            margin-top: 1.1rem;
-            padding: .5rem 1.1rem .6rem;
-            font-size: 1.1rem;
-        }
-    }
-}
+// End L

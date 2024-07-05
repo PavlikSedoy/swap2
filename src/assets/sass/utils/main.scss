@@ -28,7 +28,7 @@ main {
 
 body > .container {
     background: var(--color__main-bg);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: .1rem solid rgba(255, 255, 255, 0.05);
 }
 
 @include media-XL {

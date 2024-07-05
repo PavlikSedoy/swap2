@@ -55,3 +55,19 @@
     }
 }
 // End inner
+
+@include media-L {
+    .copyright {
+        padding-block: 2.9rem;
+    }
+}
+// End L
+
+@include media-XL {
+    .copyright {
+        &__row:last-child {
+            margin-top: 1rem;
+        }
+    }
+}
+// End XL

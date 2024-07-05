@@ -23,6 +23,11 @@
         &_2 {
             grid-template-columns: repeat(2, 1fr);
         }
+
+
+        &_3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
     // End by COL
     
@@ -44,6 +49,10 @@
         &_3 {
             grid-template-columns: repeat(3, 1fr);
         }
+
+        &_4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
     }
     // End by COL
     
@@ -60,6 +69,10 @@
     .grid--col-XL {
         &_4 {
             grid-template-columns: repeat(4, 1fr);
+        }
+
+        &_6 {
+            grid-template-columns: repeat(6, 1fr);
         }
     }
     // End by COL

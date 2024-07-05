@@ -55,7 +55,11 @@
 
 @include media-M {
     .header {
-        padding: .7rem 1rem .55rem;
+        padding: .7rem 1rem .5rem;
+
+        &__container {
+            align-items: flex-start;
+        }
     
         &__left-wr {
             gap: .5rem;
@@ -77,6 +81,7 @@
             flex-direction: row;
             align-items: center;
             margin: 0 0 0 auto;
+            padding-top: 0.3rem;
         }
     
         &__login-btn {
@@ -120,6 +125,11 @@
             height: 1.6rem;
             margin: 0 0 0.7rem;
         }
+
+        &__buttons-wr {
+            padding-top: 0;
+            margin-top: -0.2rem;
+        }
     
         &__login-btn {
             margin-inline: 4rem 3.77rem;
@@ -137,6 +147,9 @@
     .header {
         padding: 1.2rem 2rem;
 
+        &__container {
+            align-items: center;
+        }
     
         &__logo {
             width: 26.9rem;
@@ -147,6 +160,10 @@
             width: 21.5rem;
             height: 2.2rem;
             margin: 0 0 0.3rem;
+        }
+
+        &__buttons-wr {
+            margin-top: 0;
         }
     
         &__login-btn {
@@ -163,7 +180,7 @@
 
 @include media-XXL {
     .header {
-        padding: 1.2rem 4rem;
+        padding: 1.1rem 4rem 1.3rem;
     }
     // End inner
 }

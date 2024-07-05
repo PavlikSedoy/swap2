@@ -1,78 +1,78 @@
-section.video-full.section--light
-    - var playerParentClass = 'video-full__player'
-    - var playerAccessDenied = true
+section.video-full
+    .container__inner 
+    
+        - var playerParentClass = 'video-full__player'
+        - var playerAccessDenied = true
 
-    .video-full__full-wrapper
-        .video-full__player-wrapper
-            .container.container--inner.video-full__video-preview-container
-                include ../../modules/player-block
-            //- End bontainer
-        //- End player wrapper
+        .video-full__full-wrapper
+            .video-full__player-wrapper
+                .video-full__player 
+                    +responsiveImage('', '/assets/pics/hero-video-img', 'jpg')
+                    +access-pallet('video-full__access-pallet')
+                //- /.video-full__player 
+            //- /.video-full__player-wrapper
 
-        .video-full__container-desc.container.container--inner
-            .video-full__content-wrapper
-                .video-full__props
-                    .video-full__title-wr
-                        h1.video-full__title Mature Tutor Knows How To Grab A Student’s Interest!
-                    .video-full__info-row
-                        +videoInfoItem--content('video-full__info-item', 'video-info-item--size_video video-info-item--duration', '37:38', 'video-duration')
-                        +videoInfoItem--content('video-full__info-item', 'video-info-item--size_video video-info-item--viewed', '55689', 'video-viewed')
-                        +videoInfoItem--link('video-full__info-item', 'video-info-item--size_video video-info-item--publisher', 'Stacy Cruz', 'video-publisher')
-                        +videoInfoItem--link('video-full__info-item', 'video-info-item--size_video video-info-item--like', 'Like', 'video-like')
-                        +videoInfoItem--link('video-full__info-item', 'video-info-item--size_video video-info-item--download', 'Download', 'video-download')
-                    //- End info row
+            .video-full__container-desc.video-full__container
+                .video-full__content-wrapper
+                    .video-full__props
+                        .video-full__title-wr
+                            h1.video-full__title Run After Two Whores, Will Fuck Neither
+                        .video-full__info-row
+                            +videoInfoItem--content('video-full__info-item', 'video-info-item--size_video video-info-item--duration', '37:38', 'video-duration')
+                            +videoInfoItem--content('video-full__info-item', 'video-info-item--size_video video-info-item--viewed', '55689', 'video-viewed')
+                            +videoInfoItem--link('video-full__info-item', 'video-info-item--size_video video-info-item--publisher', 'Stacy Cruz', 'video-publisher')
+                            +videoInfoItem--link('video-full__info-item', 'video-info-item--size_video video-info-item--like', 'Like', 'video-like')
+                            +videoInfoItem--link('video-full__info-item', 'video-info-item--size_video video-info-item--download', 'Download', 'video-download')
+                        //- End info row
 
-                    .video-full__btn-wr
-                        - var btnParentClass = 'video-full__btn'
-                        - var btnSize = '-df'
-                        - var btnTheme = 'accent'
-                        - var btnName = 'Watch Full Video'
+                        .video-full__btn-wr
+                            a(href="/").btn.btn--theme_accent.video-full__btn Watch Full Video
+                    //- End props
 
-                        include ../../modules/btn
-                //- End props
+                    .video-full__text-wr.hidden
+                        div
+                            p Out of the blue, I had some time to spare, so I decided to unwind… in my own way. The parents were at home, so I just half-closed the door into my room, put on some porn, grabbed my cock. Before I got my chance to unload, the door swung open and… my math tutor walked in. She was shocked by the sight of me with my dick out, it was quite unexpected. Trying not to attract any unwanted attention with screams, I motioned at the door, gestured at the clock as if to say “you did show up half an hour earlier.” A spark ignited in her eyes… She asked me to lay down before pulling down my jeans and grabbing my stiff cock with her crafty fingers…
 
-                .video-full__desc
-                    p Out of the blue, I had some time to spare, so I decided to unwind… in my own way. The parents were at home, so I just half-closed the door into my room, put on some porn, grabbed my cock. Before I got my chance to unload, the door swung open and… my math tutor walked in. She was shocked by the sight of me with my dick out, it was quite unexpected. Trying not to attract any unwanted attention with screams, I motioned at the door, gestured at the clock as if to say “you did show up half an hour earlier.” A spark ignited in her eyes… She asked me to lay down before pulling down my jeans and grabbing my stiff cock with her crafty fingers…
+                        button.btn.video-full__desc-show-btn(type="button")
+                            span.show Read more
+                            span.hide Hide more
+                    //- /.video-full__text-wr
+                //- video-full__content-wrapper
+            //- video-full__container-desc
 
-                    button.video-full__desc-show-btn
-                        span.show Read More
-                        span.hide Hide More
-                //- End desc
-            //- Video properties and description
-    //- End full wrapper
+        .video-full__container.video-full__sub-details-wr
+            div.video-full__scene-preview.scene-preview
+                h4.scene-preview__title.video-full__subtitle Scene preview
 
-    .video-full__container.container.container--inner
-        div.video-full__scene-preview
-            +sectionTitle--sm('video-full__preview-title', 'Scene preview')
+                .scene-preview__grid.grid.grid--col-S_2.grid--col-M_3.grid--gap-S_10.grid--col-L_4.grid--col-XL_6
+                    - for (var i = 1; i <= 6; i++)
+                        .scene-preview__item
+                            picture
+                                source(media="(min-width:960px)" srcset="./assets/pics/scene-preview/"  + i + ".webp")
+                                source(media="(min-width:960px)" srcset="./assets/pics/scene-preview/"  +  i + ".jpg")
+                                source(srcset="./assets/pics/scene-preview/" + i + "-mobile.webp")
+                                img(src="./assets/pics/scene-preview/" + i + "-mobile.jpg", alt="alt")
+                    - for (var i = 7; i <= 12; i++)
+                        .scene-preview__item 
+                            picture
+                                source(srcset="./assets/pics/scene-preview/" + i + ".webp")
+                                img(src="./assets/pics/scene-preview/" + i + ".jpg", alt="alt")
+                    //- End loop
+                //- scene-preview__grid
+            //- scene-preview
 
-            .video-full__scene-preview-items-wrapper
-                each item in [1,2,3,4,5,6]
-                    .video-full__scene-preview-item
-                        +responsiveImage--oneSize('video-full__scene-pic', '/assets/pics/scene-preview/' + item, 'jpg')
-                //- End loop
-            //- End scene preview wrapper
-        //- End scene preview
+            .video-full__download
+                - var downloadItems = [{icon: 'download-4k', iconClass: 'dw4k', title: '4K - ULTRA HD'}, {icon: 'download-hd', iconClass: 'dw-hd', title: 'MP4 HD - 1080p'}, {icon: 'download-hd-sm', iconClass: 'dw-hd-sm', title: 'HD MP4 - 720p'}, {icon: 'download-sd', iconClass: 'dw-sd', title: 'SD MP4 - 540p'}, {icon: 'download-mobile-video', iconClass: 'dw-mb-vid', title: 'Mobile video'}, {icon: 'download-images', iconClass: 'dw-img', title: 'Images'}, {icon: 'download-subtitles', iconClass: 'dw-sub', title: 'Subtitles'}]
 
-        .video-full__btn-wr.video-full__btn-wr--mob
-            - var btnParentClass = 'video-full__btn-mob'
-            - var btnSize = '-df'
-            - var btnTheme = 'accent'
-            - var btnName = 'Watch Full Video'
-
-            include ../../modules/btn
-
-        .video-full__download
-            - var downloadItems = [{icon: 'download-4k', iconClass: 'dw4k', title: '4K - ULTRA HD'}, {icon: 'download-hd-sm', iconClass: 'dw-hd-sm', title: 'MP4 HD - 1080P'}, {icon: 'download-hd', iconClass: 'dw-hd', title: 'HD MP4 - 720P'}, {icon: 'download-sd', iconClass: 'dw-sd', title: 'SD MP4 - 540'}, {icon: 'download-mobile-video', iconClass: 'dw-mb-vid', title: 'Mobile video'}, {icon: 'download-images', iconClass: 'dw-img', title: 'Images'}, {icon: 'download-subtitles', iconClass: 'dw-sub', title: 'Subtitles'}]
-
-            .video-full__download-items-wrapper
-                .video-full__download-item--title Download
-                each item, key in downloadItems
-                    if key == 6
-                        +logo-title-item('video-full__download-item', item.icon, item.iconClass, item.title, '')
-                    else
-                        +logo-title-item('video-full__download-item', item.icon, item.iconClass, item.title, '14283MB')
-                //- End loop
-            //- End items wrapper
-        //- End download section
-    //- End container
-//- End video full section
+                .video-full__download-items-wrapper
+                    a(href="/").video-full__download-item.video-full__download-item--title Download
+                    each item, key in downloadItems
+                        if key == 6
+                            +logo-title-item('video-full__download-item', item.icon, item.iconClass, item.title, 'MP4 11898MB')
+                        else
+                            +logo-title-item('video-full__download-item', item.icon, item.iconClass, item.title, 'MP4 11898MB')
+                    //- End loop
+                //- End items wrapper
+            //- End download section
+        //- /.container__inner 
+//- video-full
