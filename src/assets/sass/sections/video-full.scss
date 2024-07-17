@@ -360,7 +360,7 @@
                 }
             }
 
-            &:nth-child(n+4) {
+            &:nth-child(n+4), &:nth-child(3) {
                 &::before {
                     @include pseudo;
                     width: calc(100% - 2rem);
