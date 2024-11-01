@@ -77,7 +77,7 @@ const cssLoaders = extra => {
 
 const jsLoaders = () => {
   const loaders = [{
-    loader: 'babel-loader',
+    loader: 'babel-loader?presets[]=es2015',
     options: {
       presets: ['@babel/preset-env']
     }
@@ -105,6 +105,9 @@ module.exports = {
           '@images' : path.resolve(__dirname, 'src/assets/images'),
           '@svg' : path.resolve(__dirname, 'src/assets/images/svg')
         }
+    },
+      optimization: {
+        minimize: false
     },
     devServer: {
       watchFiles: path.join(__dirname, 'src'),

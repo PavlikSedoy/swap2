@@ -1,11 +1,11 @@
 import 'normalize.css';
 import '@styles/index.scss'
 import PlayPreviewController from './classes/PlayPreviewController'
+import 'swiper/css'
+import Swiper from 'swiper';
 
-// // Include general module
-// import './modules/general'
 
-import './modules/sliders'
+new Swiper('#homeScreenSlider', {})
 
 // Video play
 if (document.querySelector('.videos-preview')) {
