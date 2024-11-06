@@ -17,7 +17,7 @@ section(class= sectionClass)
         //- End title
 
         .best-scenes__list.grid.grid--gap-S_10.grid--col-M_2.grid--gap-M_10-11.grid--col-L_3.grid--gap-L_10.grid--col-XL_4.grid--gap-XXL_20-21
-            - var bestScenes = [{img: 1, fullRating: true}, {img: 2, fullRating: false},{img: 3, fullRating: false},{img: 4, fullRating: true},{img: 5, fullRating: false}, {img: 6, fullRating: true},{img: 7, fullRating: false},{img: 8, fullRating: true}]
+            - var bestScenes = [{img: 1, fullRating: true}, {img: 2, fullRating: false},{img: 3, fullRating: false},{img: 4, fullRating: true},{img: 5, fullRating: false}, {img: 6, fullRating: true},{img: 7, fullRating: false}]
 
             each bestScene in bestScenes
                 +videoPreview--l('best-scenes__item', './assets/pics/best-scenes/' + bestScene.img, 'Ass for money is a good deal', true, true, publisher)

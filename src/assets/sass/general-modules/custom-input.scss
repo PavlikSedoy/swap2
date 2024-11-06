@@ -20,6 +20,18 @@
             @include placeholder {
                 color: rgba(255, 255, 255, 0.30);
             }
+
+            
+            &:is(:-webkit-autofill, :autofill) {
+                background-color: #222 !important;
+                border: none !important;
+                color: var(--color__heading-text) !important;
+            }
+
+            &:-webkit-autofill,
+            &:-webkit-autofill:focus {
+                transition: background-color 0s 600000s, color 0s 600000s !important;
+            }
         }
 
         &__btn {

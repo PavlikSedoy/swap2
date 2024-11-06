@@ -3,9 +3,15 @@ import '@styles/index.scss'
 import PlayPreviewController from './classes/PlayPreviewController'
 import 'swiper/css'
 import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
 
-
-new Swiper('#homeScreenSlider', {})
+new Swiper('#homeScreenSlider', {
+    modules: [Navigation],
+    navigation: {
+        prevEl: '#homeScreenSlider-prev',
+        nextEl: '#homeScreenSlider-next'
+    }
+})
 
 // Video play
 if (document.querySelector('.videos-preview')) {
@@ -182,3 +188,41 @@ document.addEventListener('click', e => {
         }
     }
 });
+
+const showProperVideoCount = (videos) => {
+    let max_video_count = 8;
+    let min_video_count = 4;
+    if (window.matchMedia('(max-width: 639px)').matches) {
+        min_video_count = 1;
+        max_video_count = 3;
+    } else if (window.matchMedia('(max-width: 959px)').matches) {
+        min_video_count = 2;
+        max_video_count = 4;
+    } else if (window.matchMedia('(max-width: 1439px)').matches) {
+        min_video_count = 3;
+        max_video_count = 6;
+    } else if (window.matchMedia('(min-width: 1440px)').matches) {
+        min_video_count = 4;
+        max_video_count = 8;
+    }
+
+    if (videos.length < max_video_count) {
+       videos.slice(0, min_video_count).map(v => v.style.display = 'block');
+       videos.slice(min_video_count, videos.length).map(v => v.style.display = 'none');
+    } else {
+        videos.slice(0, max_video_count).map(v => v.style.display = 'block');
+        videos.slice(max_video_count, videos.length).map(v => v.style.display = 'none');
+
+    }
+}
+
+const bestScenesLists = Array.from(document.querySelectorAll('.best-scenes__list'));
+
+if (bestScenesLists.length > 0) {
+    bestScenesLists.forEach(sceneContainer => {
+        const videos = Array.from(sceneContainer.querySelectorAll('.video-preview'));
+        showProperVideoCount(videos)
+
+        window.addEventListener("resize", () => showProperVideoCount(videos))
+    })
+}
