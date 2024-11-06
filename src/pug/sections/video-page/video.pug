@@ -16,15 +16,20 @@ section.video-full
                 .video-full__content-wrapper
                     .video-full__props
                         .video-full__title-wr
-                            h1.video-full__title Run After Two Whores, Will Fuck Neither
-                        .video-full__info-row
+                            h1.video-full__title Run After Two Whores, Will Fuck Neithe
+                        .video-full__items-info
                             +videoInfoItem--content('video-full__info-item', 'video-info-item--size_video video-info-item--duration', '37:38', 'video-duration')
                             +videoInfoItem--content('video-full__info-item', 'video-info-item--size_video video-info-item--viewed', '55689', 'video-viewed')
-                            +videoInfoItem--link('video-full__info-item', 'video-info-item--size_video video-info-item--publisher', 'Stacy Cruz', 'video-publisher')
+                        //- +videoInfoItem--link('video-full__info-item', 'video-info-item--size_video video-info-item--publisher', 'Stacy Cruz', 'video-publisher')
+                        .video-full__items-link
                             +videoInfoItem--link('video-full__info-item', 'video-info-item--size_video video-info-item--like', 'Like', 'video-like')
                             +videoInfoItem--link('video-full__info-item', 'video-info-item--size_video video-info-item--download', 'Download', 'video-download')
                         //- End info row
-
+                        .video-full__actors 
+                            +actor('video-full__actor', './assets/pics/actor1.jpg', 'Charlie Dean')
+                            +actor('video-full__actor', './assets/pics/actor2.jpg', 'Veronica Leal')
+                            +actor('video-full__actor', './assets/pics/actor3.jpg', 'Ariela Donovan')
+                            +actor('video-full__actor', './assets/pics/actor2.jpg', 'Veronica Leal')
                         .video-full__btn-wr
                             a(href="/").btn.btn--theme_accent.video-full__btn Watch Full Video
                     //- End props

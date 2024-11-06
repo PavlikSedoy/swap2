@@ -1,0 +1,42 @@
+.actor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    &__img {
+        border-radius: 50%;
+        @include square(3rem);
+        overflow: hidden;
+
+        img {
+            @include cover-image;
+        }
+    }
+
+    &__name {
+        color: var(--color__heading-text);
+        font-size: 1.2rem;
+        font-family: var(--font-odd);
+        font-weight: 400;
+        line-height: 1.25;
+        @include max-rows(1, 125%);
+    }
+}
+// End inner
+
+@include media-L {
+    .actor {
+        flex-direction: row;
+        &__img {
+            @include square(4rem);
+        }
+
+        &__name {
+            font-size: 1.4rem;
+            line-height: 1.21;
+        }
+    }
+}
+// End L

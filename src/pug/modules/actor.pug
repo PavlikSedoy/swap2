@@ -1,0 +1,6 @@
+mixin actor(oddClass, img, name)
+    .actor(class=oddClass)
+        .actor__img 
+            picture 
+                img(src=img, alt=name, loading="lazy", width="30", height="30")
+        p.actor__name= name

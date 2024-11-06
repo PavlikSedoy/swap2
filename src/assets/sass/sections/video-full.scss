@@ -44,9 +44,17 @@
 
     &__props {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
     // btn and info-items wrapper
+
+    &__title-wr {
+        flex-basis: 100%;
+        margin-block-end: 1.4rem;
+    }
 
     &__title {
         font-size: 1.6rem;
@@ -55,26 +63,45 @@
         @include max-rows(1, 120%);
     }
 
-    &__info-row {
-        margin-top: 1.5rem;
+    // &__info-row {
+    //     margin-top: 1.4rem;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: space-between;
+    //     // height: 5.2rem;
+    //     // padding-left: 0.9rem;
+    // }
+
+    &__items-info {
+        margin-inline-end: 1rem;
+    }
+
+    &__items-info, &__items-link {
         display: flex;
+        flex-direction: row;
         align-items: center;
-        justify-content: space-between;
-        height: 5.2rem;
-        padding-left: 0.9rem;
+        gap: 1rem;
+    }
+
+    &__actors {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.4rem;
+        margin-block-start: 2rem;
+        flex-basis: 100%;
     }
     
 
     &__info-item {
         height: 100%;
-        &:nth-child(2) {
+       &.video-info-item--viewed:nth-child(2) {
             display: none;
         }
     }
 
     &__btn-wr {
         align-self: center;
-        width: 100%;
+        flex-basis: 100%;
     }
 
     &__btn {
@@ -82,7 +109,7 @@
         font-size: 1.6rem;
         font-weight: 500;
         line-height: 1.5;
-        margin-top: 1.2rem;
+        margin-top: 2.6rem;
     }
     // Video profile items
 
@@ -206,20 +233,20 @@
             font-size: 2.3rem;
         }
 
-        &__info-row {
-            height: 4.4rem;
-            padding-left: 0;
-        }
+        // &__info-row {
+        //     // height: 4.4rem;
+        //     padding-left: 0;
+        // }
 
-        &__info-item {
-            &:nth-child(2) {
-                display: flex;
-            }
-        }
+        // &__info-item {
+        //     &:nth-child(2) {
+        //         display: flex;
+        //     }
+        // }
 
-        &__btn {
-            margin-top: 2rem;
-        }
+        // &__btn {
+        //     margin-top: 2rem;
+        // }
         // Video profile items
 
         &__text-wr {
@@ -282,39 +309,65 @@
         }
         // End upper info container
 
-        &__props {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            row-gap: 2rem;
-        }
+        // &__props {
+        //     display: flex;
+        //     flex-direction: row;
+        //     flex-wrap: wrap;
+        //     justify-content: space-between;
+        //     // row-gap: 2rem;
+        // }
         // btn and info-items wrapper
 
-        &__title-wr {
-            flex-basis: 100%;
-        }
+        // &__title-wr {
+        //     flex-basis: 100%;
+        // }
 
         &__title {
             font-size: 2.3rem;
             line-height: 1.21;
+            margin-block-end: 1rem;
         }
         // End title
 
-        &__info-row {
-            gap: 2.9rem;
+        // &__info-row {
+        //     gap: 2rem;
+        //     flex-basis: 100%;
+        //     margin-block-start: 1rem;
+        // }
+
+        &__actors {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-block-start: 3.35rem;
         }
 
-        &__info-row, &__btn {
-            margin-top: 0;
+        &__items-info {
+            gap: 2.5rem;
         }
 
-        &__btn-wr {
-            width: auto;
+        &__items-link {
+            gap: 2rem;
         }
+
+        &__info-item {
+           &.video-info-item--viewed:nth-child(2) {
+                display: flex;
+            }
+        }
+
+        // &__info-row, &__btn {
+        //     margin-top: 0;
+        // }
+
+        // &__btn-wr {
+        //     width: auto;
+        // }
 
         &__btn {
             padding: 1rem 2.3rem;
+            margin-block-start: 2.4rem;
         }
         // Video profile items
 
@@ -421,17 +474,56 @@
         }
         // End upper info container
 
-        &__info-row {
-            gap: 3.9rem;
+        // &__info-row {
+        //     gap: 3.9rem;
+        // }
+
+        &__props {
+            justify-content: flex-start;
+        }
+
+        &__items-info {
+            order: 3;
+            flex-basis: 100%;
+            margin-block-start: .6rem;
+        }
+
+        &__items-link {
+            order: 4;
+            flex-basis: auto;
+            margin-inline-end: 3rem;
+        }
+
+        &__title-wr {
+            order: 1;
+            flex-basis: 80%;
+            margin-block-end: 0;
+        }
+
+        &__btn-wr {
+            order: 2;
+            flex-basis: 20%;
+        }
+
+        &__actors {
+            order: 5;
+            flex-basis: auto;
+        }
+
+        &__actors, &__items-link {
+            margin-block-start: 2.8rem;
         }
 
         &__btn {
+            margin-block-start: 0;
             padding: 1rem 5rem;
+            width: max-content;
+            margin-inline-start: auto;
         }
         // Video profile items
 
         &__text-wr {
-            margin-top: 2rem;
+            margin-top: 3.2rem;
         }
         // End text
 
@@ -445,9 +537,9 @@
 
 @include media-XXL {
     .video-full {
-        &__props {
-            row-gap: 1.9rem;
-        }
+        // &__props {
+        //     row-gap: 1.9rem;
+        // }
 
         &__download-items-wrapper {
             grid-template-columns: 35.8rem 35.3rem 35.2rem auto;

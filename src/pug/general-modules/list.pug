@@ -4,7 +4,11 @@
 
 mixin list(listParentClass, listTitle, list)
     .list(class=listParentClass)
-        h5.list__title= listTitle
+        h5.list__title
+            span= listTitle
+            span.list__btn
+                +icon('arrow-down')
+            
         ul.list__ul
             each item in list
                 li.list__item
